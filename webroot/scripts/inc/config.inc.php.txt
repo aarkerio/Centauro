@@ -1,0 +1,98 @@
+<?php
+/**
+ * config.inc.php - Configuration constants
+ *
+ * @author Manuel Montoya <manuel@mononeuorna.org>
+ * @Copyright Chipotle Software GPL 2001-2007
+ */
+
+
+// Path where web is installed
+define('CENTA_PATH', substr(dirname(__FILE__),0,-3));
+
+/**
+ * DB Configuration 
+ *
+ * In this section you configure some params of your DB connection, such as 
+ * username, password, name, host and driver.
+ */
+/**
+ * DB username
+ */
+define('DBUSER','www-data');
+/**
+ * DB Password
+ */
+define('DBPWD','7mokA7');
+/**
+ * DB Name
+ */
+define('DBNAME','DBTEST');
+
+/**
+ * DB Server host
+ */
+define('DBHOST','localhost');
+
+/**
+ * DB Driver.
+ *
+ * Currently we just support the following DB Drivers: MySQL
+ */
+define('DBDRIVER','pgsql');
+
+/**
+ * DB Prefix
+ *
+ * Optional, just make sure it has an empty value
+ */
+define('DBPREFIX','centa_');
+
+/**
+ * Logs 
+ *
+ * If you want to enable logging Jaws, maybe to track the errors, or to debug a good
+ * idea is to configure/enable it.
+ */
+/**
+ * Debug: true/false
+ *
+ * Warning: This will turn on the Debugger and will show all the error and warning messages in your
+ * website, so any user that visits your site will see information that they shouldn't see
+ */
+define ("DEBUG_ACTIVATED", false);
+
+/**
+ * Log Method
+ *
+ * How do you want to print/save the log?. Currently we just support: 
+ *
+ *    LogToStack: Saves the log in an array, every ttime you reload the site, its created once again (DEFAULT).
+ *
+ *    LogToFile: Logs the message to a specified file.
+ *     Options:
+ *      file: File where you want to save data, IMPORTANT. Apache needs write-access to that file
+ *     Example:
+ *        $GLOBALS["method"] = "LogToFile";
+ *        $GLOBALS["method"]["options"] = "/tmp/jaws_log.log";
+ *
+ *
+ *    LogToSyslog: Logs the message to the syslog, you can find the log of this blog just by looking to the tag you 
+ *    define
+ *      Options:
+ *       indent: String ident is added to each message.
+ *      Example:
+ *        $GLOBALS["method"] = "LogToSyslog";
+ *        $GLOBALS["method"]["options"] = "JawsLog";
+ *
+ *    LogToScreen: All log messages are printed to screen
+ *       Example:
+ *        $GLOBALS["method"] = "LogToScreen";
+ *
+ *    LogToApache": Prints the message to the apache error log file
+ *       Example:
+ *         $GLOBALS["method"] = "LogToApache";
+ */
+
+define('METHOD','LogToScreen');
+?>

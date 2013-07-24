@@ -1,0 +1,319 @@
+html, body{ 
+ margin-top:3px;
+ padding:0;
+ background-color:white;
+ font-size: 12px;
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ border-bottom-color:#000000; 
+ border-bottom-style:solid; 
+ border-bottom-width: 1px;
+ line-height: 130%;
+} 
+
+img { 
+    border:none; 
+}
+
+a {
+color: #2d508a;
+font-size: 12px;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+text-decoration:none;
+}
+
+a:hover {
+color: #f29503;
+font-size: 12px;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+	font-size: 14px;
+	color: #D17900;
+}
+
+h2 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #03347d;
+}
+
+.content{padding:10px;} /*padding for content */ 
+
+.logo {
+	height:100px;
+	background-color:#ffffff;
+	width:109px;
+	text-align:center;
+	border-bottom:2px solid gray;
+}
+
+td.columnatop {
+	height:30px;
+	background-color:#fff;
+	border-bottom:2px solid gray;
+	font-size: 19px;
+	color: #f03d11;
+}
+
+td.columnacuerpo {
+  vertical-align:top; 
+  width:100%;
+  padding-left:8px;
+  padding-top:0px;
+  padding-right:8px;
+  background-color:#ffffff;
+}
+
+
+#cintillo {
+	font-size: 8px;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #c0c0c0;
+	color: #ffffff;
+	margin: auto;
+	width:100%;
+ }
+ 
+#imgsec {
+	text-align:left;
+	float:left;
+	
+ }
+
+.peque {  
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	font-weight: normal; 
+   color: #000000;
+   font-style: normal;
+ }
+
+.titulo {  
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-weight: bold;
+	text-align:center;
+	text-decoration: none; 
+   color: #2d508a; 
+	padding:15px,15px,15px,15;
+   font-style: normal;
+ }
+
+      
+input.text  {
+    font-family : Trebuchet MS;
+    font-size : 10pt;
+    font-weight : bold;
+    background-color : #575E60;
+    border-color : #575E60;
+    border-style : inset;
+    border-width : 2px;
+    color: #FFFFFF;
+}
+
+p.imagen { 
+   font-family: Verdana, Arial, Helvetica, sans-serif; 
+   text-align: center;
+   font-size: 11px;
+   font-style: italic; 	
+  }
+  
+p.epigrafe { 
+   font-family: Verdana, Arial, Helvetica, sans-serif; 
+   text-align: right;
+   font-size: 11px;
+   font-style: italic; 
+   padding: 30px;
+  }
+  
+p.titulito { 
+   font-family: Verdana, Arial, Helvetica, sans-serif; 
+   text-align: left;
+   font-size: 12px;
+   font-style: italic;
+   font-weight: bold;
+   padding: 10px;
+  }
+  
+p.justificado { 
+   font-family: Verdana, Arial, Helvetica, sans-serif; 
+   font-size: 12px;
+   text-align: justify;
+   line-height: 130%;
+   }
+p, ol, ul, td { 
+   font-family: Verdana, Arial, Helvetica, sans-serif; 
+   font-size: 12px;
+   line-height: 130%;
+   }
+.boldera { 
+   font-weight: bold; 
+      }
+.italica { 
+   font-style: italic; 
+   }
+ 
+.derecha { 
+   font-family: Verdana, Arial, Helvetica, sans-serif; 
+   text-align: right;
+   }   
+.titulos {  
+       font-family: Verdana, Arial, Helvetica, sans-serif;
+       font-size: 12pt; 
+       font-style: normal; 
+       font-weight: bold; 
+       color: #CC0000
+       }
+.tit {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	font-weight:bold;
+	color: #1E71FF;
+}
+#borderimage {
+	border: 1px solid #000000;
+	padding: 2px;
+	background: #c0c0c0;
+}
+.random {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight:bold;
+	text-align:center;
+	color: #1e71ff;
+}
+
+/* Este estilo es para los tutoriales cuando se indica un comando, simula el fondo negro de la consola */
+.consola {
+	border: 1px solid #cdcdcd;
+	background-color: #d9d9d9;
+	font-family: courier, sans-serif;
+	font-size: 11pt;
+	color: #000;
+	margin: 20pt,5pt,20pt,0;
+   padding: 30px,10px,30px,10px; 
+}
+/* Este estilo es para los tutoriales cuando se indica una nota o aclaraci�n */
+.notas {
+	border: 1px solid #e8dfc2;
+	background-color: #fae7a4;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #000;
+	margin-bottom: 15pt;
+	margin-top: 10pt;
+   padding-top: 10px;
+   padding-bottom: 10px;
+	padding-left: 7px;
+   font-weight: normal; 
+}
+
+
+/* Estilo para indicar codigo de un archivo (como el httpd.conf) */
+
+.courier {
+   color: #9b1111;
+	font-size: 11px;
+	font-weight: normal;
+	font-family: courier;
+  }
+  
+  /* menu.tmpl.php  */
+table.secciones {
+margin:auto;
+width:130px;
+border:1px solid #c0c0c0;
+margin-bottom: 3px; 
+margin-top: 3px;
+padding: 3px;
+text-align:center;
+}
+
+tr.on { height: 80px; background-color: #cfe3f3;}
+tr.off { height: 80px; background-color: #eceff2;}
+
+.menumain {
+  margin: 10px 0px 10px 0px;
+  font-family: Verdana, Arial, Helvetic, serif;
+  font-size: 18px;
+  font-style: normal; 
+  color: #ba330f;
+  border-bottom-style: dotted;
+  border-bottom-width: 1px;
+  font-weight: bolder;
+  text-align: left;
+  }
+  
+.estilo_seccion {
+  margin: 8px 4px 5px 4px;
+  font-family: Verdana, Arial, Helvetic, serif;
+  font-size: 17px;
+  font-style: normal; 
+  color: #f7900a;
+  border-bottom-color: #f7900a;
+  border-bottom-style: dotted;
+  border-bottom-width: 1px;
+  font-weight: bolder;
+  text-align: left;
+  width:90%;
+  }
+
+.parra_comen {
+      font-family: Verdana, Arial, Helvetic, serif;
+      font-size: 14px; 
+      font-weight: normal; 
+      color: #333a9a; 
+      font-style: normal;
+      margin-bottom:18px;
+ }
+ 
+.parra_comen a:link {
+	text-decoration: none;
+	color: #488510;
+	font-size: 9px;
+  }
+  /* estilo barra lo uso en el t�tulo de las p�ginas*/
+.barra {
+        color: #1e3a68;
+	border-bottom: 1px dashed #cfcecd;
+	font-size: 22px;
+	padding: 5px;
+	margin: auto;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetic, serif;
+	font-variant: small-caps;
+	font-stretch: expanded;
+   }
+   /* Negrita para la funcion page() donde se indica la fecha de �ltima actualizaci�n*/
+.negrita {
+	font-family:Verdana, Arial, Helvetic, serif;
+	font-size: 9px;
+	font-style: normal; 
+        font-weight: bold; 
+	color: #8d9190;
+}
+
+   
+.fecha_coment{
+	font-family:Verdana, Arial, Helvetic, serif;
+	font-size: 8px;
+	font-style: normal; 
+        font-weight: bold; 
+	color: #8d9190;
+}
+ /* cmt para el t�tulo de los comentarios*/
+#cmt {
+	margin-top:40px;
+	margin-left:5em;
+	margin-right:auto;
+	margin-left:auto;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-style: normal; 
+        font-weight: bold;
+	text-align:center;
+	color: #8d9190;
+}
+
+

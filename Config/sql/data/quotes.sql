@@ -1,0 +1,1 @@
+INSERT INTO quotes (quote, author, user_id) VALUES ('Whatever you do will be insignificant, but it is very important that you do it.', 'Gandhi', 1);

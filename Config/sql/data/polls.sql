@@ -1,0 +1,1 @@
+INSERT INTO polls (question, user_id, status) VALUES ('What is your favourite desktop?', 1, 1);

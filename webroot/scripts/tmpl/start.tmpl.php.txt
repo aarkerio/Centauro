@@ -1,0 +1,13 @@
+<h1>Welcome to My application!</h1>
+
+<div class="boton">
+     <a href="admin.php?tmpl=2"><img src="img/posts.jpg" alt="Posts" title="" /></a>
+</div>
+
+<div class="boton">
+     <a href="admin.php?tmpl=2"><img src="img/.jpg" alt="Posts" title="" /></a>
+</div>
+
+<div class="boton">
+     <a href="admin.php?tmpl=2"><img src="img/your_shares.jpg" alt="Posts" title="" /></a>
+</div>

@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-15">
+<title></title>
+</head>
+
+<body>
+<h1></h1>
+
+<p></p>
+
+<p>Bueno antes que nada en estos ejemplos estoy usando debian SID como OS, gnome-terminal como terminal y emacs como editor, pero se puede usar Gedit o Kate o Jedit o el que prefieran. Si van a usar emcas instalen el paquete php-elisp para que les pinte el código en PHP.</p>
+
+<p>como todos ustedes ya saben CakePHP es el RubyOnRails para PHP, MVC y todas esas cosas</p>
+
+<p>Actualmente CakePHP 1.2 esta en desarrollo, vamos a instalar la version 1.2 desde su repositorio en subversion:</p>
+
+<p>$sudo apt-get install subversion cakephp-instaweb php5 php5-pgsql postgresql</p>
+
+<p>$svn co https://svn.cakephp.org/repo/branches/1.2.x.x/ myproject</p>
+
+<p> cd myproject/app && cakephp-instaweb</p>
+
+<p>Esa consola va a quedar bloqueada por instaweb asi que abrimos una pestaña en gnome-terminal con Ctrl+Shift+t</p>
+
+<p>Adentro del directorio myproject hay tres directorios app, vendors y cake, vendors es para colocar código de terceras partes, cake son las librerías de CakePHP, esa directorio nunca se toca pues es el framework, este directorio es el CORE. El direcorio donde verdaderamente trabajamos es "app". Este directorio podría llmarse de otra manera por ejemplo "mycms" y nada cambiaría, la ventaja es que podemos tener varios projectos "muapp", "app3", "otracosa "  usando las mismas librerías CORE para todos estos proyectos, asi para actualizar CakePHP sólo lo hacemos en un sólo directorio.</p>
+
+<p>Bueno con nuestro browser nos colocamos en http://localhost:3000, y ya podemos ver a cakephp, lo primero que veremos es el mensaje Please change the value of 'Security.salt' in app/config/core.php. Entonces abrimos el archivo app/config/core.php, este archivo varias configiraciones, en este caso buscamos donde dice  <i>Configure::write('Security.salt'</i> este es un string de seguridad que CakePHP usa para generar las sesiones, ninguna aplicación de CakePHP debe tener este string igual asi que lo edtamos borrando y agregando algunos caracteres del string. Si una aplicación pasa de Desarrollo a Producción es bueno guardar una copia de este string en un lugar seguro pues si alguien lo cambia los passwords cifrados de la base de datos ya no funcionan.</p>
+
+<p>Si guardamos hy recargmos el brwser ya no veos el mensaje del Salt, otra opción de este archvo core.php es  Configure::write('debug', 2); que define el nivel de debug de CakePHP, cuando la aplicación esta en desarrollo puede estra en 1,2 o 3 cuando la aplicación está ya en producción por seguridad debe estar en cero.</p>
+
+<p>Si esta en 1 el debug sólo envia los mensajes de err, si está en 2 envia los mensajes de error y las consultas SQL y si esyt'ane 3 envía todo espo y todas las variables de ambiente, las opciones 2 y 3 envian un chingó de información por lo cual generalmente el debug para el desarrollo está en 1.</p>
+
+<p>createdb -E UNICODE DBCAKE</p>
+
+<p> editamos el archivo config/database.php.default y lo salvamos compo database.php, el array $default debe estar así: </p>
+
+<p>
+public $default = array(<br />
+'driver'     => 'postgres',<br />
+'persistent' => false,<br />
+'port'       => 5432,<br />
+'host'       => 'localhost',<br />
+'login'      => 'postgres',<br />
+'password'   => '9mexik00L',<br />
+'database'   => 'DBCAKE',<br />
+'prefix'     => '',<br />
+'schema'     => 'public',<br />
+'encoding'   => 'UTF-8'<br />
+);</p>
+
+<p>Ahora en el browser ya debe verse el mensaje "Cake is able to connect to the database." </p>
+
+<p></p>
+
+<p></p>
+
+<p></p>
+
+<p></p>
+
+<p></p>
+
+<p></p>
+
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+<hr>
+<address></address>
+<!-- hhmts start -->Last modified: Thu May 22 18:27:36 CDT 2008 <!-- hhmts end -->
+</body> </html>

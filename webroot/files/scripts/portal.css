@@ -1,0 +1,66 @@
+body {border:0; margin:0;
+	padding:0; font-family: Verdana, Arial; font-size: 11px; 
+	color:#000; background: #FFF; border-top: 5px solid #99723b; 
+	}
+
+a {color: #62791d; text-decoration:none;}
+a:hover {color: #FFFFFF; text-decoration: none; background-color: #62791d;}
+
+p {line-height:18px; font-family: Verdana, Arial; font-size: 11px; }
+
+img {border:0;}
+
+/*  table elements  */
+
+#maintable { 
+        padding:0;
+        width: 890px;
+        margin: auto;
+		border:1px solid #99723b;
+ }
+ 
+ #tdhead{height:80px;
+	  background: white url(/css/school/background.jpg) top repeat-y;
+ }
+ 
+ #tdmenu{
+         background-color: #2d2f31;padding:3px;
+ }
+ 
+ .quote{font-size:12pt;color:#99723b;}
+ 
+ /* Top Menu */
+#fancymenu {height: 29px; float: right; margin-top: 40px; font-size: 16px; font-family: "Lucida Fax", Georgia, Times, "Times New Roman", Helvetica, Verdana; font-weight: 650;}
+#fancymenu ul {width: 700px; padding: 0; margin: 0;}
+#fancymenu ul li {float: left; list-style: none;}
+#fancymenu ul li a  {display: block; float: left; height: 30px; position: relative; overflow: hidden; padding-left:20px; padding-right:20px; color: #664a23;}
+#fancymenu ul li a:hover  {border-bottom: 4px solid #ddccb5; color: #664a23; background:#FFF; }
+#fancymenu ul li .current {border-bottom: 4px solid #99723b;}
+#fancymenu ul li .current:hover {border-bottom: 4px solid #99723b;}
+ 
+ #tdmain{ background-color:#ede7d9; padding:3px;}
+ 
+ #tdfooter{margin-top:0;background-color:#99723b;padding:10px;width:100%;}
+ 
+ #tdfooter a {color: #fff; border-bottom: 1px #ac8854 solid;}
+ #tdfooter a:hover {background-color: #fff; color: #664a23;}
+ 
+/* Estilos para las entradas */
+.newtitle{
+font-size:14pt;
+color:green;
+margin-top:15px;
+}
+.newtheme{
+font-size:8pt;
+}
+.newdate{
+font-size:7pt;
+font-weight:bold;
+}
+.newbody {
+border:1px solid orange;
+padding:4px;
+}
+
+

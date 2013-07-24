@@ -1,0 +1,65 @@
+<?php echo '<?xml version="1.0" encoding="UTF-8"?>'; ?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<head>
+<?php
+if ( isset($javascript) ):
+  echo $html->charsetTag('UTF-8');
+  echo $javascript->link('prototype');
+  echo $javascript->link('scriptaculous.js?load=effects');
+endif;
+echo $html->css("orange"); 
+?>
+<META NAME="ROBOTS" CONTENT="INDEX,FOLLOW">
+<meta http-equiv="Expires" content="0" />
+<META NAME="REVISIT-AFTER" CONTENT="1 DAYS">
+<META NAME="RATING" CONTENT="GENERAL">
+<META NAME="RESOURCE-TYPE" CONTENT="DOCUMENT">
+<META NAME="DISTRIBUTION" CONTENT="GLOBAL">
+<meta name="generator" content="CentauroCMS see www.chipotle-software.com" />
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/news/rss/" />
+<link rel="shortcut icon" href="/img/static/favicon.ico" />
+<meta http-equiv="Content-Type" content="application/xhtml+xml;charset=utf-8" />
+<title>My portal ::  <?php echo $title_for_layout; ?></title>
+</head>
+<body>
+
+<table id="maintable">
+
+<tr><td colspan="2" id="toplinks">
+    <a href="/" title="Home">Inicio</a> |
+    <a href="/files/" title="Files">Files</a> |
+    <a href="/users/profile" title="Site">My profile</a> |
+</td></tr>
+
+<tr><td colspan="2" id="tdheader">
+<?php echo $html->link('El blog de Mariano', '/posts/view'); ?>
+</td></tr>
+
+<tr>
+<td id="tdleft">
+<div style="text-align:center"> 
+<?php
+echo $html->link(
+   $html->image('fosdem_banner_vertical.gif', array("alt"=>"My Banner", "alt"=>"My Banner")), 
+   '#', 
+   null, 
+   null, 
+   false
+);
+?>
+</div>
+</td>
+    <td id="tdmain">   
+               <?php echo $content_for_layout; ?>
+   </td>
+</tr>
+<tr><td  colspan="2" id="footer">
+    <span class="liga">Este trabajo est&aacute; licenciado bajo la <a style="font-size:7pt" href="/pages/display/783">MonoNeurona Commons License</a>. 2002-2007 &copy; :: Colectivo MonoNeurona.org ::</span>
+</td></tr>
+</table>
+
+</body>
+</html>

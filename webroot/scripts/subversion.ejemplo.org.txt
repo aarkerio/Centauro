@@ -1,0 +1,27 @@
+<virtualhost 132.245.15.101:443>
+            ServerAdmin manuel@mononeurona.org
+            ServerName devel.mononeurona.oorg
+	    ServerAlias devel.mononeurona.org
+	    Options Indexes FollowSymLinks MultiViews
+            SSLEngine On
+            SSLCertificateFile /etc/apache2/ssl2/myapache.pem
+            <Location /svn/public>
+	    	Order allow,deny        
+	    	Allow from all        
+	    	DAV svn 
+		SVNParentPath /var/mysite/svn/public
+		SVNAutoVersioning On
+		Satisfy Any
+	    	Require valid-user        
+	    	AuthType Basic
+	    	AuthName "MonoNeurona Subversion Repository"
+		AuthUserFile /var/mysite/.developers.htpasswd
+		AuthzSVNAccessFile /etc/apache2/svn/authzation
+	    </Location>    
+	    
+            ErrorLog /var/mysite/svn/log/error.log    
+            # Possible values include: debug, info, notice, warn, error, crit,    
+            # alert, emerg.    
+            LogLevel debug    
+            CustomLog /var/morg/svn/log/access.log combined	    	    
+</virtualhost>

@@ -1,0 +1,28 @@
+<?php  echo $form->create('Entry');  ?>
+<fieldset>
+<legend>New Entry</legend>
+
+<?php 
+  echo $form->input('Entry.title', array("size" => 50, "maxlength" => 50, 'between'=>': '));
+  echo $form->error('Entry.title', 'Title is required.');
+
+  echo $form->label('Entry.theme_id', 'Theme:');
+  echo $form->select('Entry.theme_id', $themes, null, null, false) . '<br />'; 
+  
+  echo $form->label('Entry.Body', 'Body:') . '<br />';
+  echo $form->textarea('Entry.body', array("cols"=>60, "rows"=>15)); 
+  echo '<br />';
+
+  echo $form->label('Entry.status', 'Published:' );
+  echo $form->checkbox('Entry.status', array("value"=>1));
+ 
+  echo $form->label('Entry.comments', 'Comments allowed:' );
+  echo $form->checkbox('Entry.comments', array("value"=>1)); 
+
+  echo $form->label('Entry.end', 'Finish edition:' );
+  echo $form->checkbox('Entry.end', array("value" => 1));
+
+  echo $form->end('Save'); 
+?>
+</fieldset>
+

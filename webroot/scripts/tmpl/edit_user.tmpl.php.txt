@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Pg PHP5 Course</title>
+</head>
+    <body>
+	 <a href="add_user.php">Add user</a>
+        <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+				   <td>Edit</td>
+                <td>
+                    user ID
+                </td>
+                <td>
+                    Username 
+                </td>
+                <td>
+                    Realname
+                </td>
+                <td>
+                    Email Address
+                </td>
+					 <td>Borrar</td>
+            </tr>
+        <?php
+        $db = pg_connect('host=localhost dbname=DBNAME user=postgres password=firstphp');
+
+        $query = "SELECT id, username, name, email, cv FROM users WHERE id = " . $_GET['id'];
+
+        $result = pg_query($query);
+		  
+        if (!$result) 
+		  {
+            echo "Problem with query " . $query . "<br/>";
+            echo pg_last_error();
+            exit();
+        }
+        
+		  
+		  // free memory
+        pg_free_result($result);
+       
+       // close connection
+       pg_close($db);
+        ?>
+        </table>
+    </body>
+</html> 

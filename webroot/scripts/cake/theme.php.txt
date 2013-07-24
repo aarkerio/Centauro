@@ -1,0 +1,13 @@
+<?php 
+
+class Theme extends AppModel {
+
+ public $name = 'Theme';
+
+ public $validate = array(
+      'theme' => VALID_NOT_EMPTY,         //'/[a-z0-9\_\-]{3,}$/i',
+      'description' => VALID_NOT_EMPTY,
+      'img' => VALID_NOT_EMPTY
+   );
+}
+?>

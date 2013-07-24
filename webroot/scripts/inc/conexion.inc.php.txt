@@ -1,0 +1,22 @@
+<?php
+/**
+*   PEAR abstracion layer 
+*   
+**/
+require_once 'MDB2.php';
+require_once 'config.inc.php';
+
+$dsn = DBDRIVER . '://' . DBUSER . ':' . DBPWD .'@' . '/'. DBNAME;
+
+$mdb2 =& MDB2::factory($dsn); // instance
+
+if (PEAR::isError($mdb2)) 
+{
+   echo ($mdb2->getMessage().' - '.$mdb2->getUserinfo());
+   exit();
+}
+
+// set fetchmode
+$mdb2->setFetchMode(MDB2_FETCHMODE_ASSOC);
+
+?>

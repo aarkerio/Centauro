@@ -1,0 +1,117 @@
+<?php
+/**
+*  Karamelo E-Learning Platform
+*  Chipotle Software 2002-2008
+*  GPLv3 manuel<arroba>mononeurona<punto>org
+*/ 
+//File: /app/controllers/users_controller.php
+
+uses('sanitize');
+
+class UsersController extends AppController{
+ 
+ public function beforeFilter() 
+ {
+  parent::beforeFilter();
+
+   if ( isset($this->data['User']['pwd'] ) ): 
+       if ( strlen($this->data['User']['pwd']) < 6):
+	     unset($this->data['User']['pwd']);
+       endif;
+   endif;
+
+  $actions = array('about','logout'); //  public actions 
+
+  $this->Auth->allow($actions);
+
+ }
+
+     
+ public function about($username) 
+ {
+        $this->pageTitle = 'About ' . $username;
+        
+        // $this->layout    = 'portal';
+
+        $conditions      = array("User.username"=>trim($username));
+
+        $this->set('data', $this->User->find($conditions));        
+ }
+
+ public function login()
+ {
+    if ($this->Auth->user()):
+
+            if (!empty($this->data)):
+
+                  if (empty($this->data['User']['remember_me'])):
+                      $this->Cookie->del('User');
+                  else:
+                      $cookie = array();
+                      $cookie['email'] = $this->data['User']['email'];
+                      $cookie['token'] = $this->data['User']['pasword'];
+                      $this->Cookie->write('User', $cookie, true, '+2 weeks');
+                  endif;
+                  unset($this->data['User']['remember_me']);
+            endif;
+
+            $this->redirect($this->Auth->redirect());
+ 
+    else:
+          
+          $this->layout    = 'portal';
+          
+          $this->pageTitle = 'Login :: Karamelo E-learning';
+    endif;
+ }
+ 
+ public function logout() 
+ {
+   $this->Cookie->del('User');
+   
+   $this->Session->destroy();
+   
+   $this->Session->setFlash('Logout');
+   
+   $this->redirect($this->Auth->logout());
+ }
+ 
+ 
+ public function admin_edit() 
+ {
+    if ( empty($this->data['User']) ):
+	$this->layout    = 'admin';
+					
+        $this->data = $this->User->read(null, $this->Auth->user('id'));
+    else:
+        if ($this->User->save($this->data['User'])):
+              $this->flash('User has been updated.','/admin/users/edit/');
+        endif;
+    endif;
+ }
+
+ /* == PRIVATE == **/
+ private function __sendNewUserPwd($email)
+ {   
+    $this->layout          = 'confirmation';
+    $this->Email->to       = $email;
+    //$this->Email->bcc    = array('noreply@karamelo.org');  // note
+    // this could be just a string too
+    $this->Email->subject  = 'Karamelo e-Learning:: confirma account';
+    $this->Email->replyTo  = 'support@karamelo.org';
+    $this->Email->from     = 'Chipotle-software.com';
+    $this->Email->template = 'confirmation'; // note no '.ctp'
+    //Send as 'html', 'text' or 'both' (default is 'text')
+    $this->Email->sendAs   = 'text'; // because we like to send pretty mail
+    //Set view variables as normal
+    $this->set('random', $random);
+    //Do not pass any args to send()
+ 
+    if ( $this->Email->send() ):
+            return true; 
+    else:
+            return false;
+    endif;
+ }
+}
+?>

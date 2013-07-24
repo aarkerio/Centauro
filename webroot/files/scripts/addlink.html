@@ -1,0 +1,60 @@
+<html>
+</head><title>Add link :: Laboratory</title></head>
+
+<body>
+<script type="text/javascript">
+/**
+  Manuel Montoya  GPLv3  
+  manuel<arroba>mononeurona<DOT>org  
+**/
+
+function addTag(tag)
+{
+  var newTag = tag + ', ';
+  
+  var t       = document.getElementById('tags');
+  var current = t.value;
+  
+  var check = current.search(tag);
+  
+  if (check != -1) 
+  {
+         alert('Tag already exist');
+         return false;
+  } 
+  
+  var forma = document.getElementById('forma');
+  
+  t.parentNode.removeChild(t);
+  
+  var upc =document.createElement("input");
+      upc.type       ="text";
+      upc.size       = 100;
+      upc.maxlength  = 120;
+      upc.value      = current + newTag;
+      upc.name       = 'data[Entry][tags]';
+      upc.id         = 'tags'; 
+      
+      document.getElementById('nuevo').appendChild(upc);
+}
+</script>
+
+<form id="forma" action="/admin/entries/add/" method="post">
+<fieldset>
+<legend>Add tags</legend>
+
+<div id="nuevo"><input name="tags" type="text" id="tags" size="100" maxlength="120" /></div>
+
+<a href="#" onclick="addTag('hacking')" title="Add Tag">hacking</a>
+<a href="#" onclick="addTag('linux')" title="Add Tag">linux</a> 
+<a href="#" onclick="addTag('recipes')" title="Add Tag">recipes</a> 
+<a href="#" onclick="addTag('GNU')" title="Add Tag">GNU</a> 
+<a href="#" onclick="addTag('psychology')" title="Add Tag">psychology</a> 
+
+</fieldset>
+</form>
+<br /><br /><br />
+<a href="http://www.mononeurona.org/news/display/1252">This is an example to this entry</a>
+
+<body>
+</html>

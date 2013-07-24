@@ -1,0 +1,37 @@
+#!/usr/bin/php
+<?php
+// variables
+
+define('FREGON', 'Un MonoNeuron, quien mas?');
+
+$pais      =  "tacubaya, DF, Mexico";
+
+$nombre    =  "Pancho lopez";
+
+$chelas    =  4;
+
+$precio    = 5.25;
+
+$total = ($precio * $chelas);
+
+$iva   = ($total * 0.15);
+
+// echo "IVA ". $iva . "\n";
+
+$gran_total = $total + $iva;
+
+$gran_total_formateado = number_format($gran_total, 2, '.', '');  // http://www.php.net/manual/en/function.number-format.php
+
+?>
+
+Bienvenidos a Zapata's bar!!
+
+<?php 
+echo "Saludos " .  $nombre . " eres de " . $pais . " llevas " . $chelas . " cervezas, cada una cuesta \$".  $precio . ", total \$".$gran_total_formateado."\n";
+
+echo FREGON . "\n";
+
+define('FREGON', 'otro valor para FREGON');
+echo FREGON;
+?> 
+

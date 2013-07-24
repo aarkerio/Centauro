@@ -1,0 +1,136 @@
+-- PostgreSQL Data Types
+
+-- http://www.postgresql.org/docs/8.1/static/datatype.html
+
+-- Mysql Data Types
+-- http://dev.mysql.com/doc/refman/5.0/en/data-types.html
+
+-- La tabla users en PostgreSQL
+
+CREATE TABLE users (
+    id serial PRIMARY KEY,   --esto crea una secuencia auto_increment
+    username varchar(20) NOT NULL UNIQUE, --login
+    passwd varchar(60) NOT NULL,
+    name varchar(90) NOT NULL,     -- el nombre completo del wey o weya
+    email varchar(45) NOT NULL UNIQUE,
+    last_visit timestamp(0) with time zone DEFAULT now() NOT NULL,  -- <--me interesan la hora y el minuto
+    datecontract date NOT NULL DEFAULT now(),                       -- aqui solo la fecha
+    salary money NOT NULL DEFAULT '9800',    -- cuanto gana el wey
+    active smallint NOT NULL DEFAULT 0,        -- 1 para activo / 0 para desactivado
+    profile text                              -- datos y notas del usuario
+);
+
+-- En MySQL
+CREATE TABLE `users` (
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `username` varchar(50) NOT NULL,
+  `passwd` varchar(32) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `last_visit` datetime NOT NULL default '0000-00-00 00:00:00',
+  `group_id` int(10) unsigned NOT NULL default '0',
+  `active` tinyint(1) unsigned NOT NULL default '0',
+  `created` datetime NOT NULL default '0000-00-00 00:00:00',
+  `modified` datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `username` (`username`),
+  UNIQUE KEY `email` (`email`,`username`),
+  KEY `group_id` (`group_id`)
+); 
+
+INSERT INTO users (username, passwd, name, email) VALUES ('rlopez','1f3870be274f6c49b3e31a0c6728957f','Ricardo Lopez Cantu','rlopez@gmail.com');
+
+
+CREATE TABLE states (
+    id serial PRIMARY KEY,
+    state varchar(60)
+);
+    
+INSERT INTO states (state) VALUES ('Zacatecas'); 
+INSERT INTO states (state) VALUES ('Morelos'); 
+INSERT INTO states (state) VALUES ('SL Potosi'); 
+INSERT INTO states (state) VALUES ('Quintana Roo'); 
+INSERT INTO states (state) VALUES ('Tabasco'); 
+INSERT INTO states (state) VALUES ('Tamaulipas');
+INSERT INTO states (state) VALUES ('D.F.'); 
+INSERT INTO states (state) VALUES ('Queretaro');  
+
+ALTER TABLE users ADD COLUMN state_id int REFERENCES states(id) NOT NULL;
+
+CREATE TABLE groups (
+    id serial PRIMARY KEY,
+    "group" varchar(60)
+);
+    
+INSERT INTO groups ("group") VALUES ('Administradores'); 
+INSERT INTO groups ("group") VALUES ('Control'); 
+INSERT INTO groups ("group") VALUES ('Reportes'); 
+INSERT INTO groups ("group") VALUES ('General'); 
+
+ALTER TABLE users ADD COLUMN group_id int REFERENCES groups(id) NOT NULL DEFAULT 4;
+
+CREATE TABLE files (
+id serial PRIMARY KEY,
+user_id int REFERENCES users(id) NOT NULL, -- foreing key
+file varchar(50) NOT NULL UNIQUE,
+description varchar(100) NOT NULL
+);
+
+CREATE TABLE themes(
+id serial PRIMARY KEY,
+theme varchar(60)
+);
+
+INSERT INTO themes (theme) VALUES ('Linux');
+INSERT INTO themes (theme) VALUES ('PHP');
+INSERT INTO themes (theme) VALUES ('My Life');
+INSERT INTO themes (theme) VALUES ('Escuela');
+
+CREATE TABLE posts (
+  id serial PRIMARY KEY,
+  user_id int REFERENCES users(id) NOT NULL, -- foreing key
+  body text NOT NULL,
+  created timestamp(0) NOT NULL DEFAULT now(),
+  theme_id int REFERENCES themes(id) NOT NULL,
+  status smallint NOT NULL DEFAULT 0  -- published/draft
+); 
+
+ALTER TABLE posts ADD COLUMN title varchar(40) NOT NULL;
+
+INSERT INTO posts (user_id, title, body, theme_id,status) VALUES (1, 'Mi primer post', '<p>Mi vida apesta porque...</p>', 3,1);
+INSERT INTO posts (user_id, title, body, theme_id,status) VALUES (1, 'En la escuela', '<p>Lorem ipsum...</p>', 2,1);
+INSERT INTO posts (user_id, title, body, theme_id,status) VALUES (1, 'Próximo viaje', '<p>Otro lorem ipsum...</p>', 3,1);
+INSERT INTO posts (user_id, title, body, theme_id,status) VALUES (1, 'Mi cumpleaños', '<p>Mi vid...</p>', 3,1);
+
+CREATE TABLE comments (
+id serial PRIMARY KEY,
+comment text NOT NULL,
+post_id int NOT NULL REFERENCES posts(id) ON DELETE CASCADE,
+status smallint NOT NULL DEFAULT 0
+);
+
+--Esto es para el componente othAuth de CakePHP
+
+CREATE TABLE permissions (
+    id serial PRIMARY KEY,
+    name character varying(50) DEFAULT ''::character varying NOT NULL,
+    created timestamp(0) with time zone DEFAULT now() NOT NULL,
+    modified timestamp(0) with time zone DEFAULT now() NOT NULL
+   );
+	       
+-- Name: groups_permissions; Type: TABLE; Schema: public; Owner: www-data; Tablespace:
+	       
+ CREATE TABLE groups_permissions (
+        group_id int REFERENCES groups(id) ON DELETE CASCADE,
+        permission_id int REFERENCES permissions(id) ON DELETE CASCADE,
+         PRIMARY KEY (group_id, permission_id)
+ );
+			   
+  -- METHODS PERMISSIONS to othAuth component
+			   
+  --Virtual classrooms
+INSERT INTO permissions (id, name) VALUES (1, 'admin/vclassrooms/add');
+INSERT INTO permissions (id, name) VALUES (2, 'admin/vclassrooms/edit');
+INSERT INTO permissions (id, name) VALUES (3, 'admin/vclassrooms/delete');
+INSERT INTO permissions (id, name) VALUES (4, 'admin/vclassrooms/listing');
+INSERT INTO permissions (id, name) VALUES (5, 'admin/vclassrooms/start');

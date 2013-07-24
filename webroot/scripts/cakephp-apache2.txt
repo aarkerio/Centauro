@@ -1,0 +1,17 @@
+<virtualhost 192.118.16.11:80>
+            ServerAdmin contact@chipotle-software.com
+            ServerName karamelo.myserver.org
+	    DocumentRoot /var/www/cake/karamelo/webroot
+
+	          <Directory /var/www/cake/karamelo/webroot>
+		      AddDefaultCharset utf-8
+		      Options Indexes FollowSymLinks MultiViews
+		      AllowOverride All
+		      Order allow,deny
+		      Allow from all
+		  </Directory>
+	    
+            ErrorLog /var/some/path/log/error.log    
+            LogLevel warn    
+            CustomLog /var/some/path/log/access.log combined	    
+</virtualhost>

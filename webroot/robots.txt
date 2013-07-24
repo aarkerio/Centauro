@@ -1,0 +1,11 @@
+#
+# robots.txt for http://www.w3.org/
+#
+# $Id: robots.txt,v 1.45 2006/06/05 01:11:19 ted Exp $
+#
+User-agent: * 
+Disallow: /admin/
+Disallow: /tmpl/
+Disallow: /scripts/
+Disallow: /news/addvote/
+

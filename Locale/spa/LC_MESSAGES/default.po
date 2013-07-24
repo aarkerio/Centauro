@@ -1,0 +1,1132 @@
+msgid  "Yes"
+msgstr "Si"
+
+msgid  "Student has no participated in this WikiPage"
+msgstr "El estudiante no ha participado en esta WikiPage"
+
+msgid  "No Gap fillings on this vclassroom"
+msgstr "No hay rellenados en esta clase"
+
+msgid  "No Scavenger hunts found"
+msgstr "No hay tesosoros en esta clase"
+
+msgid  "No edition on this WikiPage"
+msgstr "El alumno no ha editado esta WikiPage"
+
+msgid  "Edit activity"
+msgstr "Editar actividad"
+
+msgid  "Gap fillings"
+msgstr "Rellenados"
+
+msgid  "Add Gap Filling"
+msgstr "Nuevo rellenado"
+
+msgid  "Add WikiPage"
+msgstr "Nueva WikiPage"
+ 
+msgid  "Profile updated"
+msgstr "Perfil actualizado"
+
+msgid  "The username already exist"
+msgstr "Este nombre de usuario ya existe"
+
+msgid  "The email already exist"
+msgstr "Esta dirección de correo ya existe"
+
+msgid  "The code is incorrect, please put in contact with your school admin services"
+msgstr "El código es incorrecto, ponte en contacto con Servicios Escolares"
+
+msgid  "A confirmation email has been sent to"
+msgstr "Un email de confirmación ha sido enviado a"
+
+msgid  "In order to complete the registration process, please click on the link contained on the email"
+msgstr "Para finalizar el proceso deberás dar clic en la liga contenida en el correo de confirmación"
+
+msgid  "Forum created"
+msgstr "Foro creado"
+
+msgid  "Sorry, you already answered this exercise"
+msgstr "Lo sentimos, tu ya has respondido a este ejercicio ;-)"
+
+msgid  "This exercise has a value of"
+msgstr "Este ejercicio tiene un valor de"
+
+msgid  "Ready"
+msgstr "Listo"
+
+msgid  "Group"
+msgstr "Grupo"
+
+msgid  "Answer to sentence number"
+msgstr "La respuesta a la sentencia número"
+
+msgid  "Assign"
+msgstr "Asignar"
+
+msgid  "Assign this Gap filling"
+msgstr "Asignar este rellenado"
+
+msgid  "Good work!, your answers ha ben saved succesfully"
+msgstr "¡Buen trabajo!, tus respuestas han sido salvadas exitosamente" 
+
+msgid  "Finish exercise"
+msgstr "Finalizar ejercicio"
+
+msgid  "Incorrect"
+msgstr "Incorrecta"
+
+msgid  "is"
+msgstr "es"
+
+msgid  "Answers"
+msgstr "Respuestas"
+
+msgid   "gap_message"
+msgstr  "Llena los espacio en blanco con la información correcta. Asegúrate de llenar todos los espacios y poner todos los acentos."
+
+msgid  "Add new podcast"
+msgstr "Agregar podcast"
+
+msgid  "New"
+msgstr "Nuevo"
+
+msgid  "Gap filling"
+msgstr "Rellenado"
+
+msgid  "Teacher notes"
+msgstr "Notas del profesor"
+
+msgid  "Activities"
+msgstr "Actividades"
+
+msgid  "Activity"
+msgstr "Actividad"
+
+msgid  "Activity aims"
+msgstr "Objetivos de la actividad"
+
+msgid  "Anticipated problems during the class"
+msgstr "Probables dificultades en la clase"
+
+msgid  "Procedure"
+msgstr "Procedimiento"
+
+msgid  "Aids/resources"
+msgstr "Ayudas/Recursos"
+
+msgid  "Personal aims of teacher"
+msgstr "Objetivos personales para el maestro"
+
+msgid  "Timing"
+msgstr "Tiempo estimado"
+
+msgid  "No edition on this WikiPage"
+msgstr "No ha editado esta página Wiki"
+
+msgid  "Your new password is"
+msgstr "Tu nuevo password es"
+
+msgid  "do not forget"
+msgstr "no lo olvides"
+
+msgid  "Please think about your title, you can not change after save"
+msgstr "Piensa un momento en el título de la WikiPage pues no es posible modificarlo después de agregarla"
+
+msgid  "Kind"
+msgstr "Tipo"
+
+msgid  "Reporting bugs"
+msgstr "Reportar fallo"
+
+msgid  "You can help the Karamelo development team by reporting bugs and making suggestions to improve this application"
+msgstr "Tu pueda ayudar al equipo de Karamelo reportando bugs o sugiriendo mejoras para este programa"
+
+msgid  "Enhancement"
+msgstr "Mejora"
+
+msgid  "Suggestion"
+msgstr "Sugerencia"
+
+msgid  "does not exist on database"
+msgstr "no existe en la base de datos"
+
+msgid  "Success. An email has been sent to"
+msgstr "Encontrado. Un correo ha sido enviado a"
+
+msgid  "Recover password"
+msgstr "Recuperar contraseña"
+
+msgid  "Type the email used on your account"
+msgstr "Ingrese el correo utilizado en su cuenta"
+
+msgid  "Code is incorrect"
+msgstr "El código es incorrecto"
+
+msgid  "No students in this vClassroom yet"
+msgstr "No hay estudiantes suscritos a este vClassroom"
+
+msgid  "View vClassrooms"
+msgstr "Ver vClassrooms"
+
+msgid  "New Help"
+msgstr "Nueva ayuda"
+
+msgid  "Edit Help"
+msgstr "Editar ayuda"
+
+msgid  "Minimum 8 characters long"
+msgstr "Mínimo 8 caracteres en este campo"
+
+msgid  "Your account has been activated"
+msgstr "Tu cuenta ha sido activada"
+
+msgid  "Minimum 4 characters long"
+msgstr "Mínimo 4 caracteres en este campo"
+
+msgid  "Edit test"
+msgstr "Editar examen"
+
+msgid  "No replies yet"
+msgstr "Aún no hay respuestas"
+
+msgid  "New usefull link"
+msgstr "Nueva liga útil"
+
+msgid  "This lesson has been seen"
+msgstr "Esta lección ha sido vista"
+
+msgid  "Add new forum"
+msgstr "Nuevo foro"
+
+msgid  "times"
+msgstr "veces"
+
+msgid  "This field should be unique"
+msgstr "Este campo debe ser único"
+
+msgid  "Comments on news"
+msgstr "Comentarios en noticias"
+
+msgid  "Non published"
+msgstr "No publicado"
+
+msgid  "Hear"
+msgstr "Escuchar"
+
+msgid  "all letters are lowcase"
+msgstr "todas la letras son minúsculas"
+
+msgid  "add new comment"
+msgstr "escribir nuevo comentario"
+
+msgid  "add new comment"
+msgstr "escribir nuevo comentario"
+
+msgid  "Post comment"
+msgstr "Enviar comentario"
+
+msgid  "No published newsletters yet"
+msgstr "Aún no se han publicado boletines"
+
+msgid  "Subscribe to newsletter"
+msgstr "Suscríbase al boletín"
+
+msgid  "Search Results"
+msgstr "Resultados de búsqueda"
+
+msgid  "Virtual Class"
+msgstr "Clase Virtual"
+
+msgid  "You already answered this Scavenger Hunt"
+msgstr "Ya has encontrado este tesoro"
+
+msgid  "You must select at least one message"
+msgstr "Debes seleccionar al menos un mensaje"
+
+msgid  "Reports"
+msgstr "Reportes"
+
+msgid  "No reports found"
+msgstr "No hay reportes"
+
+msgid  "Your participation has been saved"
+msgstr "Tu participación ha sido registrada"
+
+msgid  "See participation"
+msgstr "Ver participación"
+
+msgid  "Points up"
+msgstr "Subir puntos"
+
+msgid  "Points down"
+msgstr "Bajar puntos"
+
+msgid  "Participations in forums"
+msgstr "Participaciones en foros"
+
+msgid  "Participations"
+msgstr "Participaciones"
+
+msgid  "You have been registered"
+msgstr "Haz sido registrado"
+
+msgid  "Copy and paste this URL in your browser to confirm your new Karamelo account"
+msgstr "Copia y pega la siguiente dirección para confirmar tu nueva cuenta en Karamelo"
+
+msgid  "Login to join this group"
+msgstr "Inica la sesión para unirte a este grupo"
+
+msgid  "Unlink"
+msgstr "Desvincular"
+
+msgid  "Send message"
+msgstr "Enviar mensaje"
+
+msgid  "Export report"
+msgstr "Generar reporte "
+
+msgid  "Student record"
+msgstr "Registro del estudiante"
+
+msgid  "Compose to"
+msgstr "Escribir a"
+
+msgid  "Compose message to group"
+msgstr "Enviar mensaje al grupo"
+
+msgid  "Students belonging to"
+msgstr "Estudiantes pertenecientes a"
+
+msgid  "Scavenger unlinked"
+msgstr "Búsqueda desvinculada"
+
+msgid  "Treasure assigned"
+msgstr "Tesoro asignado"
+
+msgid  "You are already member of this class"
+msgstr "Ya eres miembro de esta clase"
+
+msgid  "You have joined to this class succesfully"
+msgstr "Te has unido a esta clase exitosamente"
+
+msgid  "Assign this Webquest"
+msgstr "Asignar este Webquest"
+
+msgid  "Students"
+msgstr "Estudiantes"
+
+msgid  "Teachers"
+msgstr "Profesores"
+
+msgid  "Parents"
+msgstr "Padres"
+
+msgid  "New forum"
+msgstr "Nuevo foro"
+
+msgid  "New item"
+msgstr "Nuevo término"
+
+msgid  "Download"
+msgstr "Descargar"
+
+msgid  "Add new forum category"
+msgstr "Agregar una nueva categoría a los foros"
+
+msgid  "Access code"
+msgstr "Código de acceso"
+
+msgid  "No vGroups yet"
+msgstr "No hay vClassrooms"
+
+msgid  "vClassrooms on"
+msgstr "vClassrooms para"
+
+msgid  "Send final code"
+msgstr "Enviar código final"
+
+msgid  "Not answered this test yet"
+msgstr "Este test aún no a sido respondido"
+
+msgid  "messages sent to group"
+msgstr "mensajes se enviaron al grupo"
+
+msgid  "New message"
+msgstr "Nuevo mensaje"
+
+msgid  "View details"
+msgstr "Ver detalles"
+
+msgid  "View file"
+msgstr "Ver archivos"
+
+msgid  "Compose message"
+msgstr "Escribir mensaje"
+
+msgid  "About me"
+msgstr "Sobre mi"
+
+msgid  "Participation"
+msgstr "Participación"
+
+msgid  "Report"
+msgstr "Reporte"
+
+msgid  "You already have answered this Webquest"
+msgstr "Tu ya has respondido este Webquest"
+
+msgid  "suggested topic"
+msgstr "sugirió el tópico"
+
+msgid  "Reply"
+msgstr "Responder"
+
+msgid  "Discussion topic"
+msgstr "Tema de discusión"
+
+msgid  "Discussion on"
+msgstr "Discusión sobre"
+
+msgid  "You must be logged in to write a comment"
+msgstr "Debes estar logeado para escribir un comentario"
+
+msgid  "Return to"
+msgstr "Regresar a"
+
+msgid  "Legend"
+msgstr "Leyenda"
+
+msgid  "New topic"
+msgstr "Nuevo tópico"
+
+msgid  "There is not topic on this forum yet"
+msgstr "Aún no hay discusiones en este foro"
+
+msgid  "Teacher does not have any resource yet"
+msgstr "El profesor aún no tiene archivos compartidos"
+
+msgid  "Shared files"
+msgstr "Archivos compartidos"
+
+msgid  "Usefull links"
+msgstr "Ligas útiles"
+
+msgid  "resources"
+msgstr "recursos"
+
+msgid  "shared files"
+msgstr "archivos compartidos"
+
+msgid  "Upload file"
+msgstr "Subir archivo"
+
+msgid  "Title must be at least four characters long"
+msgstr "El título debe tener al menos cuatro letras"
+
+msgid  "Entry must be at least 8 characters long"
+msgstr "La entrada debe tener al menos ocho letras"
+
+msgid  "Message sent"
+msgstr "Mensaje enviado"
+
+msgid  "Message to teacher from"
+msgstr "Mensaje al profesor del usuario"
+
+msgid  "An error has been encountered, please ask Chipotle Software (www.chipotle-software.com) for support"
+msgstr "Se ha econtrado un error, por favor pregunte por soporte a Chipotle Software www.chipotle-software.com"
+
+msgid  "Definition"
+msgstr "Definición"
+
+msgid  "No items yet"
+msgstr "Aún no hay términos"
+
+msgid  "Categories"
+msgstr "Categorías"
+
+msgid  "New category"
+msgstr "Agregar categoría"
+
+msgid  "Edit category"
+msgstr "Editar categoría"
+
+msgid  "Click to add glossary in this category"
+msgstr "Clic aquí para agregar glosario en ésta categoría"
+
+msgid  "View all Lessons"
+msgstr "Todas las lecciones"
+
+msgid  "Message waiting for approval"
+msgstr "Mensaje en espera de aprobación"
+
+msgid  "Your current groups"
+msgstr "Tus grupos"
+
+msgid  "View all podcasts"
+msgstr "Todos los podcasts"
+
+msgid  "View all FAQs"
+msgstr "Todos los FAQs"
+
+msgid  "Hint"
+msgstr "Pista"
+
+msgid  "Courses"
+msgstr "Cursos"
+
+msgid  "Unlink this treasure"
+msgstr "Desligar está Búsqueda de tesoro"
+
+msgid  "Assign this Treasure"
+msgstr "Asignar esta búsqueda de tesoro"
+
+msgid  "Assign this treasure to new class"
+msgstr "Asigna este tesoro a una clase"
+
+msgid  "from"
+msgstr "de"
+
+msgid  "This treasure had been assigned to class"
+msgstr "Este cofre ha sido asignado a la clase"
+
+msgid  "results"
+msgstr "resultados"
+
+msgid  "Your result was"
+msgstr "Tu resultado fue"
+
+msgid  "possible score. Result has been saved, Thanks"
+msgstr "puntos posibles. El resultado ha sido registrado. Gracias"
+
+msgid  "You must be logged in and belongs to this class to see this section"
+msgstr "Debes ser un usuario registrado y pertenecer a esta clase para visualizar esta sección"
+
+msgid  "Percentage success"
+msgstr "Porcentaje de aciertos"
+
+msgid  "Test Results"
+msgstr "Resultados del examen"
+
+msgid  "New poll"
+msgstr "Nueva encuesta"
+
+msgid  "Edit subject"
+msgstr "Editar materia"
+
+msgid  "You should answer all the questions"
+msgstr "Debes responder todas las preguntas"
+
+msgid  "You have already answered this test"
+msgstr "Ya has contestado este examen"
+
+msgid  "There still are not any lesson for this subject"
+msgstr "Aún no se ha publicado una lección para esta materia"
+
+msgid  "There still are not any share for this subject"
+msgstr "Aún no hay recursos compartidos para esta materia"
+
+msgid  "There still are not any entry for this subject"
+msgstr "Aún no se ha publicado una entrada para esta materia"
+
+msgid  "Delete marked"
+msgstr "Borrar seleccionados"
+
+msgid  "Mark all"
+msgstr "Seleccionar todo"
+
+msgid  "Unmark all"
+msgstr "Deseleccionar todo"
+
+msgid  "Reply"
+msgstr "Responder"
+
+msgid  "Code"
+msgstr "Código"
+
+msgid  "Secret code"
+msgstr "Código final"
+
+msgid  "New Subject"
+msgstr "Nueva materia"
+
+msgid  "Title cannot be empty"
+msgstr "El título no puede estar vacío"
+
+msgid  "Last Podcasts"
+msgstr "Útimos podcasts"
+
+msgid  "wrong_pass_or_email"
+msgstr "Combinación email/password inválida. Por favor, inténtelo de nuevo"
+
+msgid  "Assign to group"
+msgstr "Asignar a grupo"
+
+msgid  "Assign this test"
+msgstr "Asignar este examen"
+
+msgid  "Explanation"
+msgstr "Explicación"
+
+msgid  "Question"
+msgstr "Pregunta"
+
+msgid  "Questions"
+msgstr "Preguntas"
+
+msgid  "This test had been assigned to class"
+msgstr "Este examen ha sido asignado a la clase"
+
+msgid  "Scavenger hunts"
+msgstr "Búsquedas de tesoro"
+
+msgid  "This scavenger is already assigned to"
+msgstr "Esta búsqueda ya está asignada a"
+
+msgid  "Instructions"
+msgstr "Instrucciones"
+
+msgid  "Tests"
+msgstr "Exámenes"
+
+msgid  "Test"
+msgstr "Examen"
+
+msgid  "questions"
+msgstr "preguntas"
+
+msgid  "View answers"
+msgstr "Ver respuestas"
+
+msgid  "Add new question"
+msgstr "Agregar nueva pregunta"
+
+msgid  "Answer"
+msgstr "Respuesta"
+
+msgid  "New answer"
+msgstr "Nueva respuesta"
+
+msgid  "Correct"
+msgstr "Correcta"
+
+msgid  "Answer is correct"
+msgstr "Esta respuesta es correcta"
+
+msgid  "Answers to"
+msgstr "Respuestas para"
+
+msgid  "Next"
+msgstr "Siguiente"
+
+msgid  "Previous"
+msgstr "Anterior"
+
+msgid  "Groups"
+msgstr "Grupos"
+
+msgid  "Questions & answers"
+msgstr "Preguntas y respuestas"
+
+msgid  "New Question/Answer"
+msgstr "Nueva pregunta/respuesta"
+
+msgid  "Question"
+msgstr "Pregunta"
+
+msgid  "Answer"
+msgstr "Respuesta"
+
+msgid  "FAQ categories"
+msgstr "Categorías de preguntas y respuestas"
+
+msgid  "Email"
+msgstr "Correo"
+
+msgid  "Name and last name"
+msgstr "Nombre y apellido"
+
+msgid  "Left empty if you do not want to change"
+msgstr "Dejar vacío si no se desea cambiarlo"
+
+msgid  "Delete"
+msgstr "Eliminar"
+
+msgid  "Date deleted"
+msgstr "Registro eliminado"
+
+msgid  "Layout"
+msgstr "Diseño"
+
+msgid  "Quote"
+msgstr "Frase"
+
+msgid  "Subscribe to newsletter"
+msgstr "Deseo recibir el boletín"
+
+msgid  "Upload new avatar"
+msgstr "Subir nuevo avatar"
+
+msgid  "Test assigned"
+msgstr "Examen asignado"
+
+msgid  "Resource unlinked"
+msgstr "Asignación removida"
+
+msgid  "This test is already assigned to vClassroom"
+msgstr "Este examen está asignado al vClassroom"
+
+msgid  "Unlink this test"
+msgstr "Desasignar este examen"
+
+msgid  "Data saved"
+msgstr "Datos guardados"
+
+msgid  "Data removed"
+msgstr "Datos eliminados"
+
+msgid  "Categories Forums"
+msgstr "Categorías en Foros"
+
+msgid  "Starting date"
+msgstr "Fecha de inicio"
+
+msgid  "Add new"
+msgstr "Agregar"
+
+msgid  "Please use Preview button before save"
+msgstr "Por favor utiliza el botón Preview antes de salvar"
+msgid  "Public"
+msgstr "Público"
+
+msgid  "New user"
+msgstr "Nuevo usuario"
+
+msgid  "About you and your interests"
+msgstr "Escribe acerca de ti y tus interéses"
+
+msgid  "I read and I do agree with terms"
+msgstr "He leído y acepto los términos del servicio"
+
+msgid  "Finishing date"
+msgstr "Fecha de fin de curso"
+
+msgid  "Finish edition"
+msgstr "Finalizar edición"
+
+msgid  "New Group for e-Course"
+msgstr "Nuevo grupo para el e-Course"
+
+msgid  "Filed classrooms"
+msgstr "Grupos archivados"
+
+msgid  "Edit vClass"
+msgstr "Editar vClass"
+
+msgid  "Edit"
+msgstr "Editar"
+
+msgid  "Get support"
+msgstr "Conseguir soporte"
+
+msgid  "Report bug"
+msgstr "Reportar falla"
+
+msgid  "New test"
+msgstr "Nuevo examen"
+
+msgid  "New glossary"
+msgstr "Nuevo glosario"
+
+msgid  "Acquaintances"
+msgstr "Ligas amigas"
+
+msgid  "View all lessons"
+msgstr "Ver todas las lecciones"
+
+msgid  "Useful links"
+msgstr "Ligas útiles"
+
+msgid  "Allow comments"
+msgstr "Habilitar comentarios"
+
+msgid  "Add comment"
+msgstr "Pon tu comentario"
+
+msgid  "Add lesson"
+msgstr "Nueva lección"
+
+msgid  "Edit lesson"
+msgstr "Editar lección"
+
+msgid  "Lessons"
+msgstr "Lecciones"
+
+msgid  "Lesson"
+msgstr "Lección"
+
+msgid  "My Images"
+msgstr "Mis imágenes"
+
+msgid  "End edition"
+msgstr "Finalizar edición"
+
+msgid  "New Lesson"
+msgstr "Nueva lección"
+
+msgid  "New Entry"
+msgstr "Nueva entrada"
+
+msgid  "This teacher has not yet published on his/her blog"
+msgstr "Este profesor aún no ha publicado entradas en su edublog"
+
+msgid  "Edit Entry"
+msgstr "Editar entrada"
+
+msgid  "Entry saved"
+msgstr "Entrada guardada"
+
+msgid  "Entry"
+msgstr "Entrada"
+
+msgid  "Entries"
+msgstr "Entradas"
+
+msgid  "Edit Lesson"
+msgstr "Editar lección"
+
+msgid  "New eCourse"
+msgstr "Nuevo eCourse"
+
+msgid  "Edit eCourse"
+msgstr "Editar eCourse"
+
+msgid  "Save"
+msgstr "Guardar"
+
+msgid  "Description"
+msgstr "Descripción"
+
+msgid  "Points"
+msgstr "Puntos"
+
+msgid  "points"
+msgstr "puntos"
+
+msgid  "Value"
+msgstr "Valor"
+
+msgid  "New question"
+msgstr "Nueva pregunta"
+
+msgid  "Edit question"
+msgstr "Editar pregunta"
+
+msgid  "File"
+msgstr "Archivo"
+
+msgid  "Send comment"
+msgstr "Enviar comentario"
+
+msgid  "Send"
+msgstr "Enviar"
+
+msgid  "At least 5 characters, only lowercase. No spaces."
+msgstr "Al menos cinco caracteres, sólo minúsculas, no usar espacios."
+
+msgid  "At least 6 characters"
+msgstr "Al menos seis caracteres"
+
+msgid  "Write comment"
+msgstr "Comentar"
+
+msgid  "write"
+msgstr "escribe"
+
+msgid  "Total votes"
+msgstr "Votos totales"
+
+msgid  "File saved"
+msgstr "Archivo guardado"
+
+msgid  "Write participating" 
+msgstr "Escribir participación"
+
+msgid  "Course description"
+msgstr "Descripción del curso"
+
+msgid  "Created"
+msgstr "Creado"
+
+msgid  "Login" 
+msgstr "Acceder"
+
+msgid  "Logout" 
+msgstr "Salir"
+
+msgid  "news_campus" 
+msgstr "Noticias en el Campus"
+
+msgid  "Home"
+msgstr "Inicio"
+
+msgid  "Title"
+msgstr "Título"
+
+msgid  "logged_in"
+msgstr "Estás logeado como"
+
+msgid  "from_dep"
+msgstr "Desde la redaccion"
+
+msgid  "Are you sure"
+msgstr "Estás seguro"
+     
+msgid  "Are you sure to want to delete this?"
+msgstr "¿Está seguro de eliminar este registro?"
+
+msgid  "about_college"
+msgstr "Nuestro Colegio"
+
+msgid  "Top score"
+msgstr "Maxima calificación"
+
+msgid  "cPanel"
+msgstr "Panel de Control"
+
+msgid  "College"
+msgstr "Colegio"
+
+msgid  "Upload file"
+msgstr "Subir archivo"
+
+msgid  "My profile"
+msgstr "Mi perfil"
+
+msgid  "Teacher"
+msgstr "Docente"
+
+msgid  "Entries"
+msgstr "Entradas"
+
+msgid  "Lessons"
+msgstr "Lecciones"
+
+msgid  "Friend links"
+msgstr "Ligas amigas"
+
+msgid  "Glossaries"
+msgstr "Glosarios"
+
+msgid  "Glossary"
+msgstr "Glosario"
+
+msgid  "Shares"
+msgstr "Compartidos"
+
+msgid  "Activities on"
+msgstr "Actividades en"
+
+msgid  "No activities yet"
+msgstr "Aún no hay actividades"
+
+msgid  "Quotes"
+msgstr "Frases"
+
+msgid  "Backup"
+msgstr "Respaldo"
+
+msgid  "Admin sections"
+msgstr "Herramientas de Administración"
+
+msgid  "Polls"
+msgstr "Opinión"
+
+msgid  "News Themes"
+msgstr "Temas noticias"
+
+msgid  "Theme"
+msgstr "Tema"
+
+msgid  "profile"
+msgstr "perfil"
+
+msgid  "Your URL format lucks incorrect"
+msgstr "El formato del URL parece incorrecto"
+
+msgid  "See comments"
+msgstr "Ver comentarios"
+
+msgid  "See vClassroom"
+msgstr "Ver grupo virtual "
+
+msgid  "Help"
+msgstr "Ayuda"
+
+msgid  "Helps"
+msgstr "Ayudas"
+
+msgid  "Tests"
+msgstr "Exámenes"
+
+msgid  "Name"
+msgstr "Nombre"
+
+msgid  "eduBlog name"
+msgstr "Nombre del eduBlog"
+
+msgid  "New Test"
+msgstr "Nuevo examen"
+
+msgid  "Comments"
+msgstr "Comentarios"
+
+msgid  "eCourses"
+msgstr "eCursos"
+
+msgid  "Glossaries"
+msgstr "Glosarios"
+
+msgid  "New Glossary"
+msgstr "Nuevo Glosario"
+
+msgid  "News"
+msgstr "Noticias"
+
+msgid  "Treasure hunt"
+msgstr "Cofre del tesoro"
+
+msgid  "Search"
+msgstr "Buscar"
+
+msgid  "Newsletter"
+msgstr "Boletin"
+
+msgid  "Newsletters"
+msgstr "Boletines"
+
+msgid  "Users"
+msgstr "Usuarios"
+
+msgid  "Directory"
+msgstr "Directorio"
+
+msgid  "Contact"
+msgstr "Contacto"
+
+msgid  "Contact us"
+msgstr "Contáctanos"
+
+msgid  "Remember me"
+msgstr "Recordarme"
+
+msgid  "Put your comment"
+msgstr "Escribe un comentario"
+
+msgid  "Wiki pages"
+msgstr "Páginas wiki"
+
+msgid  "Comments in your eduBlog" 
+msgstr "Comentarios en el eduBlog"
+
+msgid  "wrote" 
+msgstr "escribió"
+
+msgid  "Close window"
+msgstr "Cerrar ventana"
+
+msgid  "Loading"
+msgstr "Cargando"
+
+msgid  "Images"
+msgstr "Imágenes"
+
+msgid  "Upload Image"
+msgstr "Subir Imagen"
+
+msgid  "Upload"
+msgstr "Subir"
+
+msgid  "Sent"
+msgstr "Enviado"
+
+msgid  "New newsletter"
+msgstr "Nuevo boletín"
+
+msgid  "Teacher tools"
+msgstr "Herramientas pedagógicas"
+
+msgid  "upload_file"
+msgstr "Subir archivo"
+
+msgid  "Welcome"
+msgstr "Bienvenido"
+
+msgid  "Join to this class"
+msgstr "Unirse a esta clase"
+
+msgid  "Subjects"
+msgstr "Materias"
+
+msgid  "Subject"
+msgstr "Materia"
+
+msgid  "Messages"
+msgstr "Mensajes"
+
+msgid  "Message"
+msgstr "Mensaje"
+
+msgid  "Compose messages"
+msgstr "Escribir mensaje"
+
+msgid  "Are you sure you wanna send this information to student"
+msgstr "Está seguro de querer enviar esta información al estudiante"
+
+msgid  "Reference"
+msgstr "Referencia"
+
+msgid  "Forums"
+msgstr "Foros"
+
+msgid  "Put your comment"
+msgstr "Pon tu comentario"
+
+msgid  "Forgot your password?"
+msgstr "¿Olvidaste tu password?"
+
+msgid  "Join us!"
+msgstr "!Únete!"
+
+msgid  "You are already a member"
+msgstr "Ya eres miembro"
+
+msgid  "Published"
+msgstr "Publicado"
+
+msgid  "Draft"
+msgstr "Borrador"
+
+msgid  "Status modified"
+msgstr "Estado modificado"
+
+msgid  "Registration form"
+msgstr "Forma de registro"
+
+msgid  "Hidden"
+msgstr "Oculto"
+
+msgid  "Remember me"
+msgstr "Recordarme"
+
+msgid  "Remember me"
+msgstr "Recordarme"
+
+msgid  "participa"
+msgstr "Es una buena costumbre mantener tu propio registro de participaciones, antes de ecribir aquí, escribe y guarda tu particación usando un editor  de texto sencillo como Wordpad o Gedit, luego copia y pegala aquí. La participación debe ser texto plano sin formato, sin tablas ni imágenes."
+
+msgid "No downloads available"
+msgstr "No hay descargas disponibles"
+
+msgid "Pages"
+msgstr "Páginas"

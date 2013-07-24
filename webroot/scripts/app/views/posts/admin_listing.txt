@@ -1,0 +1,34 @@
+<div class="title_section">Posts</div>
+
+<p>
+  <?php 
+     echo $html->link($html->image('admin/new.png', array("alt"=>"Add new", "title"=>"Add new")), '/admin/posts/add', null, false, false);
+     echo $html->link($html->image('admin/forum.gif', array("alt"=>"See comments", "title"=>"See comments")), '/admin/comments/listing', null, false, false);
+  ?>
+
+</p>
+
+<table class="tbadmin">
+
+<?php
+//die(print_r($data));
+
+$th = array ('Edit', 'Title', 'Status', 'Delete');
+echo $html->tableHeaders($th);	
+foreach ($data as $key=>$val)
+    {
+            
+       $tr = array (
+        $gags->sendEdit($val['Post']['id'], 'news'),
+        $val['Post']['title'],
+        $gags->setStatus($val['Post']['status']),
+        $gags->confirmDel($val['Post']['id'], 'news')
+        );
+       
+    echo $html->tableCells($tr, array("class"=>"altRow", "onmouseover"=>"this.className='highlight'", "onmouseout"=>"this.className='altRow'"), 
+                                array('class'=>'evenRow',"onmouseover"=>"this.className='highlight'", "onmouseout"=>"this.className='evenRow'"));
+    
+    }
+?>
+</table>
+

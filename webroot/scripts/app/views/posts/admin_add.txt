@@ -1,0 +1,36 @@
+
+<?php echo $html->addCrumb('Control Tools', '/admin/entries/start'); ?> 
+<?php echo $html->addCrumb('Posts', '/admin/posts/listing'); ?> 
+<?php echo $html->getCrumbs(' / '); ?>
+
+<?php echo $html->formTag('/admin/posts/add/','post', array("onsubmit"=>"return validateNew()")); ?>
+
+
+  <?php echo $form->labelTag('Post/title:', 'Title' ); ?><br />
+  <?php echo $html->input('Post/title', array("size" => 40, "maxlength" => 120, "class"=>"formas")); ?><br />
+  <?php echo $html->tagErrorMsg('Post/title', 'Title is required.'); ?>
+
+  <?php 
+    echo $form->labelTag('Post/theme_id', 'Theme:' ) . '<br />';
+    echo $html->selectTag('Post/theme_id', $themes, null, null, null, false, false);      
+  ?>
+<br />
+  <?php echo $form->labelTag('Post/body', 'Body:' ); ?><br /> 
+  <?php echo $html->textarea('Post/body', array("class"=>"formas", "cols"=>80, "rows"=>16)); ?>
+  <?php echo $html->tagErrorMsg('Post/body', 'Body is required.'); ?>
+
+
+<?php 
+    echo $form->labelTag('Post/status', 'Published: ' );
+    echo $html->checkbox('Post/status', null, array("value"=>1)) . '  '; 
+              
+    echo $form->labelTag('Post/comments', 'Comments actived:' );
+    echo $html->checkbox('Post/comments', null, array("value"=>1)) . '  '; 
+    
+    echo $form->labelTag('Post/end', 'Finish editing:' );
+    echo $html->checkbox('Post/end', null, array("value"=>1)); 
+
+    echo '<br />';
+    echo $html->submit('Add'); 
+?> 
+</form>

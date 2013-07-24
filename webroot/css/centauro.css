@@ -1,0 +1,624 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 10pt; 
+    font-family:verdana, arial, helvetica, sans-serif;
+    background-color:#333333;
+    background:#333333;
+}
+
+.chiki {
+    font-size:7pt;
+}
+
+#loginpopup {
+    position: absolute;
+    background-color: white;
+    top: 100px;
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 10%;
+    z-index: 10;
+    padding: 10px;
+}
+
+a {
+color:#6a9341; /* #6a9341*/
+font-size: 10pt;
+text-decoration:none;
+}
+
+a:hover {
+text-decoration:underline;
+}
+
+#container {
+    border: 1px dotted gray;
+    width:900px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:#fff;
+    padding:0;
+    border-collapse:collapse;
+	}	
+
+/* DemoTag */
+a#Demo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	display: block;
+	height: 61px;
+	width: 100px;
+	background: url('/img/static/karamelo-demo.png') bottom right no-repeat;
+	text-indent: -999em;
+	text-decoration: none;
+  z-index:3;
+}
+
+a:hover#Demo {
+	border: none;
+}
+
+#maintable{
+width:950px;
+margin-left:auto;
+margin-right:auto;
+border:1px solid black;
+border-collapse: collapse;
+padding:0;
+}
+
+#tdheader {
+    border: 1px solid black;
+    height:96px;
+    background: #fff url(/img/admin/centauro_header.jpg) no-repeat;
+    text-align:right;
+    vertical-align:bottom;
+}	
+  
+#toplinks{
+  background:white url(/img/static/main_nav_bg.jpg) repeat-x top;
+  height:28px;
+  text-align:right;
+  vertical-align:middle;
+  }
+  
+#toplinks a{font-size:8pt;color:#6a9341;}
+
+.waydingform{font-size:7pt;}
+
+#tdmenu{
+  height:32px;
+  border: 1px solid black;
+  position:relative;
+  margin:0 auto;
+  text-align:left;
+  width:145px;
+  }
+
+
+#tdleft {
+    border-right: 1px dotted orange;
+    width:150px;
+    vertical-align:top;
+}
+
+#tdmain {
+    width:660px;
+    vertical-align:top;
+    padding:4px;
+}
+
+#tdright {
+    border-left: 1px dotted green;
+    width:150px;
+    vertical-align:top;
+}
+
+
+#footer {
+    border: 1px solid black;
+    height:30px;
+    margin:25px 0 15px 0;
+    font-size:8pt;
+    padding:15px 0 15px 0;
+    text-align:center;
+}
+
+#tit_poll {
+width:300px;
+padding:3px;
+background-color:orange;
+font-weight:bold;
+font-size:11pt;
+}
+
+div.spaced{margin:25px 0 25px 0}
+
+img { 
+    border:none; 
+}
+img.imgborder { 
+    border:1px solid black;
+    margin:2px;
+    margin-bottom:5px;
+}
+img.themes { 
+    border:1px solid black;
+    margin-left:15px;
+    margin-bottom:5px;
+}
+
+.comentnew{padding:5px;margin:10px 0 10px 0; border:1px dotted gray;}
+
+#divwayding {text-align:left;}
+
+#wayding {
+position:absolute;
+top:4px;
+left:770px;
+width:189px;
+}
+
+.titulo {font-size:14pt;}
+
+#botones {  
+	margin-top:25px;
+	margin-bottom:25px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center; 
+}
+
+#cintillo {
+	font-size: 8px;
+	font-weight: bold;
+	background-color: #6a9341;
+	color: #ffffff;
+	margin: auto;
+	width:100%;
+	text-align:left;
+}
+
+
+div#recover{
+       padding:10px;
+       width:80%;
+       margin-left:auto;
+       margin-right:auto;
+       border:1px solid black;
+       margin:0 0 20px 0;
+       display:none;
+}
+
+#irc {font-size:7pt;text-align:center;margin:0 0 10px 0}
+
+#irc a{font-size:7pt;}
+
+.peque {
+	font-size: 9px;
+	font-weight: normal; 
+	color: #000000;
+	font-style: normal;
+}
+
+h1 {
+	margin:0px 0px 15px 0px;
+	padding:0px;
+	font:bold 20px verdana, arial, helvetica, sans-serif;
+	color:#383838;
+	}
+h2 {
+	font:bold 12px/14px verdana, arial, helvetica, sans-serif;
+	margin:0px 0px 5px 0px;
+	padding:0px;
+	}
+/* estilo barra lo uso en el t?tulo de las paginas*/
+.barra {
+        color: #000;
+	border-bottom: 1px dashed #cfcecd;
+	font-size: 22px;
+	padding: 5px;
+	margin: auto;
+	font-weight: bold;
+	font-variant: small-caps;
+	font-stretch: expanded;
+	text-align:left;
+   }
+
+.menumain {
+      margin-top: 30px;
+      padding: 2px;
+      font-size: 12px; 
+      color: #000;
+      border-bottom:1px solid #000;
+      font-weight: bolder;
+      text-align: center;
+  }
+/* Formularios*/
+code {
+	color: #B46233;
+	font: 90% "Courier New", Courier, monospace;
+}
+
+form {
+	margin: 0;
+	padding: 0;
+}
+	
+input, textarea {
+	background-color: #F8F6F1;
+	border: 1px solid #aaa;
+	font-size:100%; 
+}
+
+input:hover, textarea:hover {
+	background: #F0ECE1;
+}
+/* Negrita para la funcion page() donde se indica la fecha de ?ltima actualizaci?n*/
+.negrita {
+	font-size: 9px;
+	font-style: normal; 
+        font-weight: bold; 
+	color: #8d9190;
+}
+p.imagen { 
+   text-align: center;
+   font-size: 11px;
+   font-style: italic; 	
+  }
+  p.justificado { 
+   font-size: 12px;
+   text-align: justify;
+   line-height: 130%;
+   }
+p, ol, ul, br, hr { 
+   font-size: 12px;
+   /*text-align:left;*/
+   }
+/* Este estilo es para los tutoriales cuando se indica un comando, simula el fondo negro de la consola */
+p.consola {
+	border: 1px dashed black;
+	background-color: #eee;
+	font-family: Verdana, Courier, sans-serif;
+	font-size: 11pt;
+	font-weight:normal;
+	color: #cc0000;
+        padding: 0.5em;
+	text-align:left;
+}
+/* Este estilo es para los tutoriales cuando se indica una nota o aclaraci?n */
+.notas {
+	border: 1px solid #b8113c;
+	background-color: #fae7a4;
+	color: #000;
+	padding: 0.3em;
+	border: 1px solid #;
+	text-align:left;
+}
+/* Estilo para indicar codigo de un archivo (comowhitre el httpd.conf) */
+.courier {
+      color: #9b1111;
+      font-size: 11pt;
+      font-weight: normal;
+      font-family: courier;
+      border: 1px dotted #000;
+      background-color: #ececec;
+      padding: 0.3em;
+      text-align:left;
+      width:550px;
+}
+
+/* la clase titnew para los divs de los titulos de las noticias */ 
+.titnew {
+  margin: 8px;
+  padding:8px;
+  font-size: 16px;
+  font-style: normal; 
+  color: #fc6500;
+  border: 2px solid #fc6500;
+  font-weight: bolder;
+  text-align: left;
+  }
+/* la clase titnew para los divs de los cuerpos de las noticias */ 
+.redaccion {
+  margin-left: 8px;
+  padding:0;
+  font-size: 8px; 
+  color: #000;
+  text-align: left;
+  }
+  
+/* la clase titnew para los divs de los cuerpos de las noticias */ 
+.bodynew {
+  margin: 8px;
+  padding:3px;
+  font-size: 12px;
+  font-style: normal; 
+  color: #000;
+  border: 1px solid #cccccc;
+  vertical-align:top;
+  width:auto;
+  text-align:justify;
+  }
+  
+.bodynew a {
+color: #6a9341;
+font-size: 10pt;
+text-decoration:none;
+}
+
+.bodynew a:hover {
+color: #6a9341;
+background-image: url(/img/static/url-moving.gif);
+background-position: bottom;
+background-repeat: no-repeat;
+}
+
+.img_new {text-align:right;margin:0 10px 0 15px; position:relative;width:150px;float:right;}
+.votes_counter{padding:4px;margin:0 10px 0 15px; border:1px dotted gray;text-align:center;width:100px;position:relative;float:right;clear:right;}
+.votes{font-size:18pt;color:#990000;font-weight:bold;text-align:center;}
+
+.login { 
+	font-size: 13pt;
+	font-weight: bold;
+	text-align:left; 
+        color: #619550; 
+       }
+.cv {  
+	border:1px solid black;
+	background-color:#e2dede;
+	font-size: 10px;
+	font-weight: normal;
+	text-align:justify; 
+        color: #000000; 
+	padding:8px;
+	margin:15px;
+        font-style: normal;
+      }
+
+.socialnet{margin:20px 0 10px 20px;}
+
+.socialnet a {font-size:6pt;}
+
+.socialnet a:hover{font-size:6pt;}
+
+/* Too cool for IE*/
+a#tooCool {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	display: block;
+	height: 80px;
+	width: 80px;
+	background: url('/images/too_cool_sash.png') bottom right no-repeat;
+	text-indent: -999em;
+	text-decoration: none;
+  z-index:3;
+}
+
+a:hover#tooCool {
+	border: none;
+}
+
+#cover {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    opacity: .7;
+	filter: alpha(opacity=70);
+    z-index: 5;
+}
+
+#loginpopup {
+    position: absolute;
+    background-color: white;
+    top: 50px;
+    width: 40%;
+    margin-left: 300px;
+    margin-right: auto;
+    z-index: 10;
+    padding: 10px;
+}
+
+/* Coloracion del c�digo hecha por Jedit*/
+
+.syntax0 {
+color: #000000;
+}
+.syntax1 {
+color: #cc0000;
+}
+.syntax2 {
+color: #ff8400;
+}
+.syntax3 {
+color: #6600cc;
+}
+.syntax4 {
+color: #cc6600;
+}
+.syntax5 {
+color: #ff0000;
+}
+.syntax6 {
+color: #9966ff;
+}
+.syntax7 {
+background: #ffffcc;
+color: #ff0066;
+}
+.syntax8 {
+color: #006699;
+font-weight: bold;
+}
+.syntax9 {
+color: #009966;
+font-weight: bold;
+}
+.syntax10 {
+color: #0099ff;
+font-weight: bold;
+}
+.syntax11 {
+color: #66ccff;
+font-weight: bold;
+}
+.syntax12 {
+color: #02b902;
+}
+.syntax13 {
+color: #ff00cc;
+}
+.syntax14 {
+color: #cc00cc;
+}
+.syntax15 {
+color: #9900cc;
+}
+.syntax16 {
+color: #6600cc;
+}
+.syntax17 {
+color: #0000ff;
+}
+.syntax18 {
+color: #000000;
+font-weight: bold;
+}
+.gutter {
+background: #dbdbdb;
+color: #000000;
+}
+.gutterH {
+background: #dbdbdb;
+color: #990066;
+}
+
+/*Credits: Dynamic Drive CSS Library */
+/*URL: http://www.dynamicdrive.com/style/ */
+
+.suckertreemenu { width:200px;margin-left:0;float:left;text-align:left;}
+
+.suckertreemenu ul{
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+/*Top level list items*/
+.suckertreemenu ul li{
+position: relative;
+display: inline;
+float: left;
+background-color: #F3F3F3; /*overall menu background color*/
+}
+
+/*Top level menu link items style*/
+.suckertreemenu ul li a {
+display: block;
+font-size:8pt;
+width: 90px; /*Width of top level menu link items*/
+padding: 1px 8px;
+border: 1px solid black;
+border-left-width: 0;
+text-decoration: none;
+color: #2f2c2d;
+}
+	
+/*1st sub level menu*/
+.suckertreemenu ul li ul{
+left: 0;
+position: absolute;
+top: 1em; /* no need to change, as true value set by script */
+display: block;
+visibility: hidden;
+}
+
+/*Sub level menu list items (undo style from Top level List Items)*/
+.suckertreemenu ul li ul li{
+display: list-item;
+float: none;
+}
+
+/*All subsequent sub menu levels offset after 1st level sub menu */
+.suckertreemenu ul li ul li ul{ 
+left: 159px; /* no need to change, as true value set by script */
+top: 0;
+}
+
+/* Sub level menu links style */
+.suckertreemenu ul li ul li a{
+display: block;
+width: 160px; /*width of sub menu levels*/
+color: #2f2c2d;
+text-decoration: none;
+padding: 1px 5px;
+border: 1px solid #ccc;
+}
+
+.suckertreemenu ul li a:hover{
+background-color: white;
+color: blue;
+}
+
+/*Background image for top level menu list links */
+.suckertreemenu .mainfoldericon{
+background: #F3F3F3 url(img/arrow-down.gif) no-repeat center right;
+}
+
+/*Background image for subsequent level menu list links */
+.suckertreemenu .subfoldericon{
+background: #F3F3F3 url(img/arrow-right.gif) no-repeat center right;
+}
+
+* html p#iepara{ /*For a paragraph (if any) that immediately follows suckertree menu, add 1em top spacing between the two in IE*/
+padding-top: 1em;
+}
+	
+/* Holly Hack for IE \*/
+* html .suckertreemenu ul li { float: left; height: 1%; }
+* html .suckertreemenu ul li a { height: 1%; }
+/* End */
+
+/** PAGINATION ***/
+
+div.pagination {
+	padding: 3px;
+	margin: 3px;
+    font-size:8pt;
+}
+
+div.pagination a {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+	border: 1px solid #fe640d;
+	text-decoration: none; /* no underline */
+    font-size:8pt;
+	color: #fe640d;
+}
+div.pagination a:hover, div.pagination a:active {
+	border: 1px solid #000099;
+	color: #000;
+}
+div.pagination span.current {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+	border: 1px solid #fe640d;
+	font-weight: bold;
+	background-color: #fe640d;
+	color: #fff;
+}
+div.pagination span.disabled {
+	padding: 2px 5px 2px 5px;
+	margin: 2px;
+	border: 1px solid #EEE;
+	color: #c0c0c0;
+}
+
+.Title {color:#993300;font-size:13pt;font-weight:bold}
+

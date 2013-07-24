@@ -1,0 +1,52 @@
+<?php 
+// Centauro MM 2001-2007 
+// autentification
+ob_start(); // abro el buffer
+
+require_once 'conexion.inc.php';
+    
+ $sql = "SELECT id, email, password, username, group_id FROM usuarios WHERE username='" . trim($_POST['username']) . "' AND passwd='".md5(trim($_POST['passwd']))."'";
+    
+ $result = $mdb2->query($sql);
+    
+   if ($Row = $result->fetchRow())    
+   {
+        session_set_cookie_params(604800,"/","myserver.org", 0);
+        
+        session_start(); 
+        
+        $_SESSION['EMAIL']        = $Row['email'];
+	
+	$_SESSION['USERNAME']     = $Row['username'];
+	
+	$_SESSION['PWD']          = $Row['pwd'];
+	
+	$_SESSION['GRUPO']        = $Row['group_id'];
+	
+	$_SESSION['IDUSER']       = $Row['iduser'];
+	
+	$_SESSION['LANG']         = "es";
+	
+        //this adds 7 days to the current time
+        setcookie("cLOGIN", $Row['username']) or die("Could not set cookie");
+	
+	header("Location: ../admin/");    
+ }
+ else
+ {
+   ?>
+     
+      <script language="JavaScript">
+         <!--
+    
+         alert('Datos Incorrectos \n Intentelo de nuevo');
+         
+         document.location.href = '../login.php';
+    -->
+   </script>
+		         
+<?
+ }
+
+ob_end_flush(); // vacio el buffer
+?>

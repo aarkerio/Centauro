@@ -1,0 +1,43 @@
+<?php
+//AppModel gives you all of Cake's Model functionality
+
+class Entry extends AppModel {
+
+   public $name = 'Entry';
+   
+   public $belongsTo = array('User' =>
+                           array('className'  => 'User',
+                                 'conditions' => '',
+                                 'order'      => '',
+                                 'foreignKey' => 'user_id'
+                           ),
+                           'Theme' =>
+                           array('className'  => 'Theme',
+                                 'conditions' => '',
+                                 'order'      => null,
+                                 'foreignKey' => 'theme_id'
+                           )
+                     );
+    
+    public $hasMany = array('Comment' =>
+                         array('className'     => 'Comment',
+                               'conditions'    =>  null,
+                               'order'         => 'Comment.created',
+                               'limit'         => null,
+                               'foreignKey'    => 'entry_id',
+                               'dependent'     => true,
+                               'exclusive'     => false,
+                               'finderQuery'   => ''
+                         )
+                  );
+    
+    public $validate = array(
+      'title'   => VALID_NOT_EMPTY, 
+      'user_id' => VALID_NOT_EMPTY,
+      'body'    => VALID_NOT_EMPTY,
+      'status'  => VALID_NOT_EMPTY
+   );
+
+}
+
+?>

@@ -1,0 +1,138 @@
+<?php
+// include DB libs
+require_once 'MDB2.php';
+
+// setup error handler
+PEAR::setErrorHandling(PEAR_ERROR_CALLBACK, 'dumpError');
+
+function dumpError($error)
+{
+    echo '<div style="border: dotted red">An error occured: ',
+         $error->getMessage(), ' ',
+         $error->getUserInfo() , '</div>';
+}
+
+// d as in "dump" for printing variables
+function d($what) 
+{
+    echo '<pre>'; print_r($what); echo '</pre>';
+}
+
+
+// DSN string
+$dsn = 'pgsql://postgres:*****@localhost/DBEMPRESA';
+
+// create instances
+$mdb2 =& MDB2::factory($dsn); // singleton too, no connection yet
+
+// set fetchmode
+$mdb2->setFetchMode(MDB2_FETCHMODE_ASSOC);
+
+// simple select queries
+$all = $mdb2->queryAll('SELECT * FROM users');
+
+$one = $db->getOne('SELECT name FROM users WHERE id = 1');
+
+
+$one = $mdb2->queryOne('SELECT name FROM users WHERE id = 1');
+
+$row = $mdb2->queryRow('SELECT * FROM users WHERE id = 1');
+
+$col = $mdb2->queryCol('SELECT name FROM users');
+
+
+// quoting
+$one = $db->getOne('SELECT name FROM users WHERE id = '. $db->quoteSmart(1) );
+//d($one);
+$one = $mdb2->queryOne(
+         'SELECT name FROM users WHERE id = '
+         . $db->quote(1, 'integer')
+       );
+//d($one);
+
+
+// sequence tables
+//echo $db->nextId('users_db');
+//echo $mdb2->nextId('users_mdb2');
+// set an option
+//$mdb2->setOption('seqcol_name','id');
+//echo $mdb2->nextId('users_mdb2_again');
+
+// autoExecute
+$data = array('id' => 5, 'name' => 'Cameron');
+//$db->autoExecute('users', $data, DB_AUTOQUERY_INSERT);
+$data2 = array('name' => 'Matt');
+//$mdb2->loadModule('Extended');
+//$mdb2->extended->autoExecute('users', $data2, MDB2_AUTOQUERY_UPDATE, 'id=5');
+
+// prepared statements
+/*
+$statement = $db->prepare('INSERT INTO users VALUES (?, ?)');
+$data = array(6, 'Chris');
+$db->execute($statement, $data);
+$db->freePrepared($statement);
+*/
+/*
+$statement = $mdb2->prepare('INSERT INTO users VALUES (?, ?)');
+$data = array(7, 'Dave');
+$statement->execute($data);
+$statement->free();
+*/
+
+// execute multiple
+/*
+$statement = $db->prepare('INSERT INTO users VALUES (?, ?)');
+$data = array(
+    array(8, 'James'),
+    array(9, 'Cliff')
+);
+$db->executeMultiple($statement, $data);
+$db->freePrepared($statement);
+*/
+/*
+$statement = $mdb2->prepare('INSERT INTO users VALUES (?, ?)');
+$data = array(
+    array(10, 'Kirk'),
+    array(11, 'Lars')
+);
+$mdb2->loadModule('Extended');
+$mdb2->extended->executeMultiple($statement, $data);
+$statement->free();
+*/
+
+// transactions
+/*
+$db->autoCommit();
+$result = $db->query('DELETE users');
+if (PEAR::isError($result)) {
+    echo 'rollback';
+    $db->rollback();
+} else {
+    echo 'commit';
+    $db->commit();
+}
+*/
+
+if ($mdb2->supports('transactions')) 
+{
+    $mdb2->beginTransaction();
+}
+
+$result = $mdb2->query('DELETE users');
+
+if (PEAR::isError($result)) {
+    if ($mdb2->in_transaction) {
+        echo 'rollback';
+        $mdb2->rollback();
+    }
+} 
+else 
+{
+    if ($mdb2->in_transaction) 
+	 {
+        echo 'commit';
+        $mdb2->commit();
+    }
+}
+
+?>

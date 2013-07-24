@@ -1,0 +1,102 @@
+<?php
+
+uses('sanitize');
+
+class EntriesController extends AppController {
+
+ public $name = 'Entries';
+ 
+ public function display() 
+ {
+  $this->pageTitle = 'Mi blog';
+  $this->layout    = 'blog';
+  $conditions = array('Entry.status'=>1);
+  $fields     = array('Entry.id','Entry.title','Entry.theme_id','Entry.comments','Entry.created','Entry.body', 'Theme.theme');
+  $order      = 'Entry.id DESC';
+  $limit      = 10;
+  $data       = $this->Entry->findAll($conditions, $fields, $order, $limit);
+  $this->set('data', $data);
+ }
+
+ public function view($entry_id) 
+ {
+  if ( !isset($entry_id) || !intval($entry_id)):
+      $this->redirect('/');
+      return false;
+  endif;
+
+  $this->pageTitle = 'Mi blog';
+
+  $this->layout    = 'blog';
+  
+  $conditions = array('Entry.status'=>1, 'Entry.id'=>$entry_id);
+ 
+  $this->set('data', $this->Entry->find($conditions));
+ }
+
+ /* === ADMIN METHODS===*/
+ public function admin_add() 
+ {
+   $this->layout = 'admin';
+
+   if ( !empty($this->data['Entry']) ):
+       $this->Sanitize = new Sanitize;
+ 	      
+       $this->Sanitize->paranoid($this->data['Entry']['title']);
+	      
+       $this->Sanitize->html($this->data['Entry']['body']);
+ 	
+       $this->data['Entry']['user_id'] = 1;
+ 	
+       $this->Entry->create();
+ 	      
+       if ($this->Entry->save($this->data["Entry"])):
+ 	      $this->flash('Story has been added', '/admin/entries/listing');
+       endif; 
+ 	   
+   else:
+       $this->set('themes', Set::combine($this->Entry->Theme->find('all', array('order' => 'theme')), "{n}.Theme.id","{n}.Theme.theme"));
+            
+   endif;
+ }
+ 
+ public function admin_edit($entry_id = null) 
+ {
+   $this->layout = 'admin';
+
+   if ( !empty($this->data['Entry']) ):
+       $this->Sanitize = new Sanitize;
+ 	      
+       $this->Sanitize->paranoid($this->data['Entry']['title']);
+	      
+       $this->Sanitize->html($this->data['Entry']['body']);
+ 	
+       $this->data['Entry']['user_id'] = 1;
+ 	
+       $this->Entry->create();
+ 	      
+       if ($this->Entry->save($this->data["Entry"])):
+ 	      $this->flash('Story has beed updated', '/admin/entries/listing');
+       endif; 
+ 	   
+   else:
+       $this->data = $this->Entry->read(null, $entry_id); // charge data for edit
+
+       $this->set('themes', Set::combine($this->Entry->Theme->find('all', array('order' => 'theme')), "{n}.Theme.id","{n}.Theme.theme"));
+            
+   endif;
+ }
+
+ public function admin_listing() 
+ {
+  $this->layout = 'admin';
+  $conditions = null;
+  $fields     = array('id', 'title', 'status');
+  $order      = 'Entry.id DESC';
+  $limit      = 20;
+
+  $this->set('data', $this->Entry->findAll($conditions, $fields, $order, $limit));
+
+ }
+}
+?>

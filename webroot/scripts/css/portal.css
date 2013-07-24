@@ -1,0 +1,307 @@
+body {  
+background: white url(../img/background.jpg) top repeat-y; 
+color: black; 
+text-align: center; 
+font-size:10pt;
+font-family: Verdana;
+}
+
+/* Header section */
+#header {
+    width: 800px;
+    height: 130px;
+    display: block;
+    margin: 0 auto;
+    text-align: left;
+    background: #900 url(../img/header.jpg) top no-repeat;
+    font-size:9pt;
+    color:red;
+    text-align:right;
+}
+
+.main_tabula td {text-align:center;padding:6px}
+
+#header h1 {
+    margin: 0;
+    padding-top: 20px;
+    color: #fff;
+    font-weight: bold;
+    font-size: large;
+}
+
+#header h1 a, #header h1 a:hover {
+    color: #fff;
+    text-decoration: none;
+     font-size: smaller;
+}
+.title_section{ 
+font-size:16pt;
+font-weight:bold;
+font-family:Verdana;
+color:#3364a4;
+padding:4px;
+} 
+
+#header p {
+    font-size: smaller;
+    color: #fff;
+    margin: 0px;
+}
+/* End Header */
+
+#wrapper{
+   border:1px solid black;
+   width:800px;
+   margin:0 auto;
+}
+
+/* main */
+
+#main{
+float:center;
+padding:5px;
+} 
+
+/* Container */
+#container {
+    background-color: #ffffff;
+    
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+    width: 800px;
+    float:center;
+}
+
+/* Footer */
+#footer {
+    letter-spacing: 1px;
+    border-top: 1px dotted #babdb6;
+    margin-top: 40px;
+    color: #888a85;
+    padding: 10px;
+    float:center;
+    width:800px;
+}
+
+#footer a, #footer a:hover {
+    text-decoration: none;
+}
+
+#footer p {
+    font-size: smaller;
+    margin: 0 0 10px 0;
+}
+/* End Footer */
+
+#main-section {
+    /*width: 90%;
+    padding: 10px;
+    padding-top: 20px; */
+    margin-top:20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+a {
+    color: #3465a4;
+}
+
+a:hover {
+    color: #9db029;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+    color: #3465a4;
+}
+
+.wrapnew {
+  padding:5px;
+  border: 1px solid #c0c0c0;
+  margin:5px 0 5px 0;
+}
+.news_title {
+	color:#cc0033;
+	border-bottom:dotted 1px gray;
+	font-size:14pt;
+  margin:7px 0 7px 0;
+  padding:3px;
+	}
+  
+.news_le {
+	font-size:12pt;
+	margin:5px;
+	font-variant: normal;
+	text-transform: capitalize;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.news_theme {
+  color:gray;
+	margin:0;
+	font-size:11px;
+	font-variant: normal;
+	text-transform: capitalize;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.news_date {
+	font-size:8pt;
+	font-variant: normal;
+	text-transform: capitalize;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight:bold;
+  margin-bottom:5px;
+}
+
+/* NAVIGATION MENU  */
+
+/* Root = Horizontal, Secondary = Vertical */
+ul#navmenu {
+  margin: 0;
+  border: 0 none;
+  padding: 0;
+  width: 800px; /*For KHTML*/
+  list-style: none;
+  height: 24px;
+}
+
+ul#navmenu li {
+  margin: 0;
+  border: 0 none;
+  padding: 0;
+  float: left; /*For Gecko*/
+  display: inline;
+  list-style: none;
+  position: relative;
+  height: 24px;
+}
+
+ul#navmenu ul {
+  margin: 0;
+  border: 0 none;
+  padding: 0;
+  width: 160px;
+  list-style: none;
+  display: none;
+  position: absolute;
+  top: 24px;
+  left: 0;
+}
+
+ul#navmenu ul:after /*From IE 7 lack of compliance*/{
+  clear: both;
+  display: block;
+  font: 1px/0px serif;
+  content: ".";
+  height: 0;
+  visibility: hidden;
+}
+
+ul#navmenu ul li {
+  width: 160px;
+  float: left; /*For IE 7 lack of compliance*/
+  display: block !important;
+  display: inline; /*For IE*/
+}
+
+/* Root Menu */
+ul#navmenu a {
+  border: 1px solid #FFF;
+  border-right-color: #CCC;
+  border-bottom-color: #CCC;
+  padding: 0 6px;
+  float: none !important; /*For Opera*/
+  float: left; /*For IE*/
+  display: block;
+  background: #EEE;
+  color: #666;
+  font: bold 10px/22px Verdana, Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  height: auto !important;
+  height: 1%; /*For IE*/
+}
+
+/* Root Menu Hover Persistence */
+ul#navmenu a:hover,
+ul#navmenu li:hover a,
+ul#navmenu li.iehover a {
+  background: #CCC;
+  color: #FFF;
+}
+
+/* 2nd Menu */
+ul#navmenu li:hover li a,
+ul#navmenu li.iehover li a {
+  float: none;
+  background: #EEE;
+  color: #666;
+}
+
+/* 2nd Menu Hover Persistence */
+ul#navmenu li:hover li a:hover,
+ul#navmenu li:hover li:hover a,
+ul#navmenu li.iehover li a:hover,
+ul#navmenu li.iehover li.iehover a {
+  background: #CCC;
+  color: #FFF;
+}
+
+/* 3rd Menu */
+ul#navmenu li:hover li:hover li a,
+ul#navmenu li.iehover li.iehover li a {
+  background: #EEE;
+  color: #666;
+}
+
+/* 3rd Menu Hover Persistence */
+ul#navmenu li:hover li:hover li a:hover,
+ul#navmenu li:hover li:hover li:hover a,
+ul#navmenu li.iehover li.iehover li a:hover,
+ul#navmenu li.iehover li.iehover li.iehover a {
+  background: #CCC;
+  color: #FFF;
+}
+
+/* 4th Menu */
+ul#navmenu li:hover li:hover li:hover li a,
+ul#navmenu li.iehover li.iehover li.iehover li a {
+  background: #EEE;
+  color: #666;
+}
+
+/* 4th Menu Hover */
+ul#navmenu li:hover li:hover li:hover li a:hover,
+ul#navmenu li.iehover li.iehover li.iehover li a:hover {
+  background: #CCC;
+  color: #FFF;
+}
+
+ul#navmenu ul ul,
+ul#navmenu ul ul ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 160px;
+}
+
+/* Do Not Move - Must Come Before display:block for Gecko */
+ul#navmenu li:hover ul ul,
+ul#navmenu li:hover ul ul ul,
+ul#navmenu li.iehover ul ul,
+ul#navmenu li.iehover ul ul ul {
+  display: none;
+}
+
+ul#navmenu li:hover ul,
+ul#navmenu ul li:hover ul,
+ul#navmenu ul ul li:hover ul,
+ul#navmenu li.iehover ul,
+ul#navmenu ul li.iehover ul,
+ul#navmenu ul ul li.iehover ul {
+  display: block;
+}
+
+

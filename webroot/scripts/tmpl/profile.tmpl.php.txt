@@ -1,0 +1,20 @@
+<?php
+// armo mi query
+$q = 'SELECT u.id, u.username, u.email, u.profile, s.state FROM users AS u, states AS s WHERE u.state_id=s.id AND u.id=1';
+//$q='SELECT * FROM posts';
+
+//exit($q); //depuro 
+
+$results = $mdb2->query($q);
+
+$user = $results->fetchRow();
+
+  //exit(var_dump($user));  //depuro
+   echo '<div class="wrapnew">';
+      echo '<div class="news_title">'  . $user['username']  . '</div>';
+      echo '<div class="news_le">'     . $user['profile'] . '</div>';
+      echo '<div class="news_le">'     . $user['state'] . '</div>';
+      echo '<div style="font-size:7pt;font-weight:bold">'    . str_replace('@', '_ARROBA_', $user['email']) . '</div>';
+   echo '</div>';
+
+?>

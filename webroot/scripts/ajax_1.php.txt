@@ -1,0 +1,56 @@
+<?php
+/**    Manuel Montoya 2007 GPL License 3 **/
+?>
+<html>
+<head>
+  <title>My first ajax</title>
+</head>
+<body>
+
+<script language=”javascript”>
+var objxmlHttp=null;
+// Devuelve una instancia correcta del objeto XMLHTTPRequest de acuerdo al browser usado.
+function ObtenerObjetoxmlHttp()
+{
+try // Instancia para navegadores no Microsoft
+{objxmlHttp=new XMLHttpRequest();}
+catch (e) // Instancias para navegadores Microsoft
+{ try
+{ objxmlHttp=new ActiveXObject(“Msxml2.XMLHTTP”);}
+catch (e)
+{ objxmlHttp=new ActiveXObject(“Microsoft.XMLHTTP”);}
+}
+return objxmlHttp;
+}
+
+// Envía la forma y los datos seleccionados en el control <select>
+function EnviarForma() {
+objxmlHttp=ObtenerObjetoxmlHttp();
+objxmlHttp.open(“POST”,”procesa.php”, true, “”, “”);
+objxmlHttp.setRequestHeader(“Content-type”, “application/x-www-form-urlencoded;
+charset=UTF-8”);
+objxmlHttp.onreadystatechange=MostrarRespuesta;
+objxmlHttp.send(“selLugares=”+document.getElementById(“selLugares”).selectedIndex);
+}
+
+// Procesa la respuesta del servidor y la muestra en el <div> del Panel 2
+function MostrarRespuesta() {
+if (objxmlHttp.readyState==4)
+document.getElementById(“divDescripcion”).innerHTML=objxmlHttp.responseText;
+}
+
+</script>
+
+<p>
+   <form action="calcula.php" method="post">
+   <p align="center">Fecha de nacimiento:
+   <input type="text" name="dia" value="00" size="2" maxlength="2">
+   <input type="button" name="boton" value="Enviar" onclick="EnviarForma()" />
+   </form>
+</p>
+
+
+<div id="">
+</div>
+</body>
+</html>

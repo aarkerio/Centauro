@@ -1,0 +1,26 @@
+<virtualhost 152.448.146.101:80>
+      ServerName trac.mononeurona.org
+      DocumentRoot /var/morg/trac
+      ErrorLog /var/morg/chipotle/log/apache.log
+     
+      ScriptAlias /karamelo /usr/share/trac/cgi-bin/trac.cgi
+      
+      <Location "/karamelo">
+         SetEnv TRAC_ENV "/var/morg/trac/karamelo"
+      </Location>
+         
+       <Directory "/var/morg/trac">
+	   Options Indexes MultiViews
+           AllowOverride None
+           Order allow,deny
+           Allow from all
+       </Directory>
+	   
+       # You need something like this to authenticate users
+       <Location "/karamelo/login">
+            AuthType Basic
+            AuthName "project"
+            AuthUserFile /var/mysite/.developers.htpasswd
+            Require valid-user
+       </Location>
+</virtualhost>

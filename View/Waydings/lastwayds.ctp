@@ -1,0 +1,10 @@
+<?php
+foreach ($data as $val):
+    echo $this->Html->link($this->Html->image('avatars/'.$val['User']['avatar'], array('alt'=>$val['User']['username'], 'title'=>$val['User']['username'], 
+                            'width'=>20, 'style'=>'margin-right:5px')),  '/blog/'.$val['User']['username'], array('escape'=>False));
+    echo '<span style="font-size:8pt;font-weight:bold">'.$val['User']['username'] .' est&aacute;:</span> <br />';
+    echo '<span style="font-size:7pt;">'.nl2br($val['Wayding']['task']) .'</span> <br />';
+    echo '<span style="font-size:6pt;">'.$this->Time->timeAgoInWords($val['Wayding']['created']) .'</span><br /><br />';
+endforeach;
+
+# ? > EOF

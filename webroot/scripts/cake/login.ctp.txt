@@ -1,0 +1,9 @@
+<h1>Login</h1>
+<?php
+echo $form->create('User', array('action' => 'login'));
+echo $form->input('email', array('size' => 40, 'maxlength'=> 50, 'between'=>':<br />'));
+echo $form->input('pwd', array('between'=>'<br />', 'type' => 'password', 'label'=>'Password:', 'size' => 9, 'maxlength'=> 9));
+echo $form->label('remember_me', 'Remember me:');
+echo $form->checkbox('remember_me', array('value'=>1));
+echo $form->end('Login');
+?>

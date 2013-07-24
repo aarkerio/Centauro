@@ -1,0 +1,17 @@
+
+<div class="barra">My posts</div>
+
+<?php
+//debug($data);
+foreach ($data as $var)
+{
+//exit(var_dump($post));
+ echo '<div style="padding:3px;border:1px dotted black;margin:6px;">';
+   echo '<div class="titnew">'  . $var['Post']['title']   . '</div>';
+   echo '<div class="bodynew">' . $var['Post']['body']    . '</div>';
+   echo '<div class="fecha">'  . $var['Post']['created'] . '</div>';
+   echo $html->link('Permalink', '/posts/display/'.$var['Post']['id']) . '<br />';
+ echo '</div>';  
+}
+?>
+   

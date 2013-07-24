@@ -1,0 +1,49 @@
+<?php 
+   echo '<?xml version="1.0"?>'; 
+   echo $html->docType();
+?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>My app :: <?php echo $title_for_layout; ?> </title>
+<meta name="keywords" content="education, school, elearning" />
+<link rel="shortcut icon" href="/img/static/favicon.ico" />
+<meta name="description" content="Mi Portal" />
+<?php
+ if ( isset($javascript) ):
+    echo $html->charset('UTF-8');
+    echo $javascript->link('prototype');
+    echo $javascript->link('scriptaculous.js?load=effects');
+ endif;
+
+echo $html->css("estilos");
+?>
+</head>
+<body>
+<table id="mainTable">
+<tr><td colspan="2" id="toplinks">
+<?php
+ if ( $session->check('Auth.User') ):
+   echo '<span style="font-size:7pt;color:#8bb126;padding-right:15px">You are logged in as <b>';
+   echo $session->read('Auth.User.username') .'</b></span>'.$html->link('(Logout)', '/users/logout') . ' | '; 
+ endif;
+ 
+ echo $html->link('Home', '/') . ' | ';
+ echo $html->link('About Me', '/users/about/') . ' | ';
+?>
+</td></tr>
+<tr><td colspan="2" id="header">
+<h1>CakePHP Blog</h1>
+</td></tr>
+<tr><td id="sidebar">
+<?php
+  // echo $this->element('menu_b');
+?>
+</td>
+<td id="maincontent"><?php echo $content_for_layout; ?></td>
+</tr>
+<tr>
+<td colspan="2" id="footer"> Mi name &copy; 2008</td></tr>
+</table> 
+</body>
+</html>

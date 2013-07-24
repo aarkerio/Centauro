@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Pg PHP5 Course</title>
+</head>
+    <body>
+	 <a href="add_user.php">Add user</a>
+        <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+				   <td>Edit</td>
+                <td>
+                    user ID
+                </td>
+                <td>
+                    Username 
+                </td>
+                <td>
+                    Realname
+                </td>
+                <td>
+                    Email Address
+                </td>
+					 <td>Borrar</td>
+            </tr>
+        <?php
+        $db = pg_connect('host=localhost dbname=DBNAME user=postgres password=firstphp');
+
+        $query = "SELECT id, username, name, email FROM users";
+
+        $result = pg_query($query);
+		  
+        if (!$result) 
+		  {
+            echo "Problem with query " . $query . "<br/>";
+            echo pg_last_error();
+            exit();
+        }
+
+        while($myrow = pg_fetch_assoc($result)) 
+		  {
+            echo '<tr>';
+				   echo '<td><a href="edit_user.php?id="' . $myrow['id'] . '">Edit</a></td>';
+					echo '<td>' . $myrow['id'] . '</td>';
+				   echo '<td>' . $myrow['username'] . '</td>';
+					echo '<td>' . $myrow['name'] . '</td>';
+					echo '<td>' . $myrow['email'] . '</td>';
+					echo '<td><a href="delete_user.php?id="' . $myrow['id'] . '">Delete</a></td>';
+				echo '</tr>';
+        }
+		  
+		  // free memory
+        pg_free_result($result);
+       
+       // close connection
+       pg_close($db);
+        ?>
+        </table>
+    </body>
+</html> 

@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Pg PHP5 Course</title>
+</head>
+    <body>
+        <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td>
+                    user ID
+                </td>
+                <td>
+                    Username 
+                </td>
+                <td>
+                    Realname
+                </td>
+                <td>
+                    Email Address
+                </td>
+            </tr>
+        <?php
+        $db = pg_connect('host=localhost dbname=DBNAME user=postgres password=firstphp');
+
+        $query = "SELECT * FROM users";
+
+        $result = pg_query($query);
+		  
+        if (!$result) 
+		  {
+            echo "Problem with query " . $query . "<br/>";
+            echo pg_last_error();
+            exit();
+        }
+
+        while($myrow = pg_fetch_assoc($result)) 
+		  {
+            printf ("<tr><td>%s</td><td>%s</td><td>%s</td><td>%s</td></tr>", $myrow['id'], htmlspecialchars($myrow['username']),
+					htmlspecialchars($myrow['name']), htmlspecialchars($myrow['email']));
+        }
+		  
+		  // free memory
+        pg_free_result($result);       
+       
+       // close connection
+       pg_close($db);
+  ?>
+        </table>
+    </body>
+</html> 

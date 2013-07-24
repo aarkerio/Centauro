@@ -1,0 +1,89 @@
+<?php
+session_start();
+if ( !isset($_SESSION['USERNAME']) )
+{
+   header("Location: ../login.php");
+   exit;
+}
+?>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+            "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>::My Web application::</title>
+
+<link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+ <div id="wrapper">  
+   <div id="header">
+    <?php echo date("F j, Y, g:i a"); ?>
+    <h1>My application</h1>
+   </div>
+   <ul id="navmenu">
+       <li><a href="index.php">Control Panel</a></li>
+
+         <li><a href="index.php?tmpl=3">Posts</a>
+           <ul>
+	      <li><a href="index.php?tmpl=2">Add post</a></li>
+	      <li><a href="index.php?tmpl=3">Comment</a></li>
+	   </ul>
+	 </li>
+	<li><a href="index.php?tmpl=4">Contacts</a>
+  <ul>
+         <li><a href="index.php?tmpl=5">New Contact</a></li>
+ </ul>
+ </li>
+     <li><a href="index.php?tmpl=6">Products</a>
+   <ul>
+       <li><a href="index.php?tmpl=7">New Product</a> </li>
+        <li><a href="index.php?tmpl=8">New Product category</a> </li>
+  </ul>
+  <li><a href="index.php?tmpl=">Help</a>
+  <ul>
+       <li><a href="index.php?tmpl=">Report Bug</a> </li>
+       <li><a href="http://www.chipotle-software.com/index.php?id=9">Get support</a> </li>
+  </ul>
+  </li>
+</ul>
+   <div id="container">
+	 <div id="main">
+        <?php
+         // Pear database abstraction
+         require_once '../inc/conexion.inc.php'; 
+
+         //set template
+         $tmpl = ( isset($_GET['tmpl']) && intval($_GET['tmpl']) ) ? $_GET['tmpl'] : 1;
+         
+         $file = '';
+
+         switch($tmpl)
+         {
+            case 1:
+                   $file = 'start';
+                   break;
+            case 2:
+                   $file = 'list_posts';
+                   break;
+            case 3:
+                   $file = 'add_post';
+                   break;
+            case 4:
+                   $file = 'edit_post';
+                   break;
+            case 5:
+                   $file = 'list_contact';
+                   break;
+         }
+         
+         //insert template
+         include_once 'tmpl/'.$file.'.tmpl.php';
+        ?>
+	</div>  
+   </div>  
+ </div><!-- wrapper ends -->
+</body>
+</html>

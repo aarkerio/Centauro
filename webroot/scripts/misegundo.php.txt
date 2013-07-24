@@ -1,0 +1,30 @@
+#!/usr/bin/php
+<?php
+// variables
+
+
+$pais      =  "Tacubaya, DF, Mexico";
+
+$nombre    =  "Pancho Lopez";
+
+$chelas    =  4;
+
+$precio    = 5.25;
+
+?>
+
+Bienvenidos a Zapata's bar!!
+
+<?php 
+
+echo "Saludos ";
+echo $nombre;
+echo " eres de ";
+echo $pais;
+echo " llevas ";
+echo $chelas;
+echo " cervezas, cada una cuesta ";
+echo $precio;
+echo "\n";
+?> 
+

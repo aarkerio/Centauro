@@ -1,0 +1,48 @@
+<?php header("Content-type: text/xml");
+      // Manuel Montoya 2007 --  GPLv3  --    manuel_NOSPAM_mononeurona_DOT_org
+		// you must include:
+	   // <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/path/rss.php" />
+		
+      echo '<?xml version="1.0" encoding="UTF-8" ?>';
+		
+		include('inc/conexion.php');  //returns $con connection object
+	 	
+		$q = "SELECT id, titulo, noticia, created FROM noticias WHERE status = 1 ORDER BY created DESC";
+		
+		$result = $mdb2->queryAll($q);
+?>
+<rss version="2.0">
+<channel>
+<title>::<?php echo $username; ?> on My Site::</title>
+   <link><?php echo $_SERVER['SERVER_NAME'] ?></link>
+   <description><?php echo $username; ?>' blog</description>
+   <language>es-MX</language>
+      <image> 
+      <title><?php echo $username; ?>- Minuto x Minuto</title>
+      <url>http://www.mononeurona.org/img/static/mn-small.png</url>
+      <link>http://www.monneurona.org</link>
+          <width>100</width>
+          <height>71</height>
+   </image>
+
+<?php
+
+foreach ($result as $v) {  // blog entries 
+    
+    $tmp    = substr($v['noticia'], 0, 300) . "...";
+    $body   = strip_tags($tmp);
+?>
+ <item>
+        <title><?php echo  $v['title']; ?></title>
+        <link>http://<?php echo $_SERVER['SERVER_NAME'] ?>/users/entry/<?php echo $v['id'] ?></link>
+        <comments><?php echo $_SERVER['SERVER_NAME'] ?>/users/entry/<?php echo $v['id'] ?></comments>
+        <description><![CDATA[<?php echo $body; ?>]]></description>
+        <pubDate><?php  echo $v['created'] ?></pubDate>
+	      <creator><?php  echo $v['created'] ?></creator>
+        <category><?php echo $v['themeblog_id']; ?></category>
+        <guid><?php echo $_SERVER['SERVER_NAME'] ?>/users/entry/<?php echo $v['id'] ?></guid>
+    </item>
+<?php }   ?> 
+
+</channel>
+</rss>

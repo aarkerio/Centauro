@@ -1,0 +1,58 @@
+-- Name: users; Type: TABLE; Schema: public; Owner: www-data; Tablespace: 
+CREATE TABLE users (
+    "id" serial PRIMARY KEY,
+    "username" varchar(10) NOT NULL UNIQUE, --login
+    "pwd" varchar(60)  NOT NULL,
+    "name" varchar(70)  NOT NULL,     --real first and last names
+    "email" varchar(45)  NOT NULL UNIQUE,
+    "created" timestamp(0) with time zone DEFAULT now() NOT NULL,
+    "profile" text,
+    "avatar" varchar(100) DEFAULT 'default-avatar.jpg' NOT NULL,
+    "quote" varchar(150),
+    "name_blog" varchar(150),
+    CHECK ( length(pwd)  > 25  )  -- long password
+);
+
+-- passwd = "karamelo"
+INSERT INTO users("username", "pwd", "name", "email", "profile", "quote", "name_blog") 
+VALUES ('admin', '3916784b451c011b7ec822fb9bb66cfc3b5dbf0e', 'John Smith', 'john@site.edu', 
+'Psychology and art teacher, travel and long walks lover. A life fueled by the magic bean, "Coffee".',  
+'"Nonviolence is a weapon of the strong", Gandhi', 'The Lost Forest');
+
+
+CREATE TABLE themes (  -- News themes with image each one
+  id serial PRIMARY KEY,
+  theme varchar(40) NOT NULL,
+  description varchar(400) NOT NULL,
+  img varchar(80) NOT NULL
+);
+
+INSERT INTO themes ("theme", "description", "img") VALUES ('Linux', 'All about penguins', 'penguin.png');
+INSERT INTO themes ("theme", "description", "img") VALUES ('My Life', 'personal', 'life.png');
+INSERT INTO themes ("theme", "description", "img") VALUES ('Educacion', 'Educacion', 'educacion.png');
+
+
+-- entries in the users blogs
+CREATE TABLE entries (
+id serial PRIMARY KEY,
+title varchar(50) NOT NULL,
+body text NOT NULL,
+user_id int REFERENCES users(id) ON DELETE CASCADE,
+theme_id int REFERENCES themes(id) ON DELETE CASCADE,
+created timestamp(0) with time zone DEFAULT now() NOT NULL,
+status smallint NOT NULL DEFAULT 0,
+comments smallint NOT NULL DEFAULT 0
+);
+
+CREATE TABLE comments (    --comments in blogs
+ id serial PRIMARY KEY,
+ entry_id int REFERENCES entries(id) ON DELETE CASCADE,
+ "created" timestamp(0) with time zone DEFAULT now() NOT NULL,
+ comment text,
+ username varchar(20) NOT NULL,
+ email varchar(60),
+ website varchar(250)
+);
+
+
+

@@ -1,0 +1,32 @@
+msgid "news_campus"
+msgstr "News in Campus"
+
+msgid   "gap_message"
+msgstr  "Fill in the blanks with the missing information. Be sure to answer all of them."
+
+msgid  "about_college"
+msgstr "About College"
+
+msgid  "Join us"
+msgstr "Join us"
+
+msgid  "from_dep"
+msgstr "From Dep"
+
+msgid  "logged_in"
+msgstr "Logged in"
+
+msgid  "cPanel"
+msgstr "Control Panel"
+
+msgid  "close_window"
+msgstr "Close"
+
+msgid   "wrong_pass_or_email"
+msgstr  "Invalid e-mail / password combination. Please try again"
+
+msgid  "where_pin"
+msgstr "Where is my PIN?"
+
+msgid  "participa"
+msgstr "It's advisable to have your participation recorded on your own computer. Before you write here, write and save your participation using a simple text editor like Wordpad or Gedit. After you have done this, copy it and paste it here. Your participation should be plain text, without any format, tables or images."

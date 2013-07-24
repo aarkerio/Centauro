@@ -1,0 +1,62 @@
+<?php
+/**
+ * Framework_Object_DB
+ *
+ * @author Manuel Montoya <manuel@mononeurona.org>
+ * @copyright Chipotle Software <cwww.hipotle-software.com> 
+ * @license http://www.opensource.org/licenses/gpl-license.php
+ * @package Framework
+ * @subpackage Object
+ * @filesource
+ */
+
+require_once 'MDB2.php';
+require_once 'config.inc.php';
+
+/**
+ * Framework_Object_DB
+ *
+ * Extends the base Framework_Object class to include a database connection.
+ * @package Framework
+ * @subpackage Object
+ */
+abstract class DBconnect
+{
+    protected $conn;
+	
+    public function __construct() {
+	
+	$dsn = DBDRIVER . "://". DBUSER . ":" . DBPWD . "@" . DBHOST . "/" . DBNAME;
+	
+	//print $dsn;
+	
+	static $conexion = null;
+	
+	if ($conexion === null) 
+	{
+		//echo $dsn;
+		$conexion = DB::connect($dsn, true); 
+		
+		// With DB::isError you can differentiate between an error or
+		// a valid connection.
+		if (DB::isError($conexion)) 
+		{
+			die ($conexion->getMessage());
+		}
+		
+	}
+		
+		 $this->conn = $conexion;
+ }
+ 	 
+ public function __destruct()
+ {
+            if (DB::isConnection($this->conn)) 
+	    {
+                 $this->conn->disconnect();
+	    }
+            
+ }	
+}
+
+?>

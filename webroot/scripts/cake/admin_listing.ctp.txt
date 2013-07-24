@@ -1,0 +1,25 @@
+<?php echo $html->div('title_section', 'Entries'); ?>
+<table class="tbadmin">
+<?php
+echo $html->para(null, $html->link('New entry', '/admin/entries/add'));
+
+$th = array ('Edit', 'Title', 'Status', 'Delete');
+
+echo $html->tableHeaders($th);	
+
+foreach ($data as $val):
+
+       $st = ($val['Entry']['status'] == 1 ) ? 'Published' : 'Draft';
+       $tr = array (
+        $html->link('Edit', '/admin/entries/edit/'.$val['Entry']['id']),
+        $val['Entry']['title'],
+        $st,
+        $html->link('Delete', '/admin/entries/delete/'.$val['Entry']['id'])
+        );
+       
+    echo $html->tableCells($tr, array("class"=>"altRow", "onmouseover"=>"this.className='highlight'", "onmouseout"=>"this.className='altRow'"), 
+                                array('class'=>'evenRow',"onmouseover"=>"this.className='highlight'", "onmouseout"=>"this.className='evenRow'")); 
+endforeach;
+?>
+</table>
+

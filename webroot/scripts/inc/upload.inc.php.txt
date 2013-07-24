@@ -1,0 +1,113 @@
+<?php
+/**
+*  Manuel Montoya 2002-2007 
+*  GPLv3 manuel<at>mononeurona<dot>org
+*/ 
+
+//include_once("inc/conexion.php");
+
+    /* SUBMITTED INFORMATION - use what you need
+    *  temporary filename (pointer): $file
+    *  original filename           : $file_name
+    *  size of uploaded file       : $file_size
+    *  mime-type of uploaded file  : $file_type
+    */
+    
+    /** uploaddir:  directory relative to where script is runing */
+    
+    $uploaddir    = "./"; // system path to directory
+    
+    $maxfilesize  = 23783058; // 10 MB max size
+    
+    $file_name    = $_FILES['uploadedfile']['name'];
+    
+    $file_size    = $_FILES['uploadedfile']['size'];
+    
+    $file         = $_FILES['uploadedfile']['tmp_name'];
+    
+    $type         = $_FILES['uploadedfile']['type'];
+    
+    /** Security: checks to see if file is valid, if not, do not allow upload ==*/
+    
+    if ( $type == "application/x-php") // .php is not a valid file!!! 
+    {   
+        $ErrMsg  = "<h1>ERROR</h1> the file ". $file_name . " is not valid.<br>";
+        $ErrMsg .= "<p>no se pueden agregar archivos .php, subelo como .txt<br /><br />";
+		  $ErrMsg .= '<a href="upload_1.php"> &gt;&gt; Regresar </a>';
+        /**  delete uploaded file ==*/
+        unlink($file);
+        exit($ErrMsg);
+   }
+   
+   if ( $file_size > $maxfilesize) //check size
+   {
+       $ErrMsg  = "<h1>ERROR</h1> The file is too big.<br>";
+       $ErrMsg .= "<p>Bigger than 10.0 MB <br><br>";
+       $ErrMsg .= "The current size: " . $file_size ."</p>\n";
+       
+       /** delete uploaded file */
+       unlink($file);
+       exit($ErrMsg);
+    }
+    
+    $extension   = getExtension($file_name);
+    
+    $allowed     = array("pdf", "doc", "xls", "ppt", "sxw", "odt", "ods", "odp", "abw", "html", "zip", "rar", "gz", "png", "jpg", "gif");
+    
+    if ( !in_array($extension, $allowed) )
+    {
+       die("This does not look like one allowed file ". $extension);
+    }
+    
+	 //$next_id = $con->getOne("SELECT nextval('files_id_seq')"); // next table ID  
+	 
+	 $next_id = 56; // just example
+	 
+    $Name        = $_POST['username'] . "_" . $next_id . '.'. $extension;  // username should be on session data
+    
+    /** setup final file location and name */
+    /** change spaces to underscores in filename  */
+    $final_filename = str_replace(" ", "_", $Name);
+    
+    $newfile = $uploaddir . "/" . $final_filename;
+    
+    /** do extra security check to prevent malicious abuse */
+    if (is_uploaded_file($file))
+    {
+       /** move file to proper directory ==*/
+       if (!move_uploaded_file($file, $newfile))
+       {
+          /** if an error occurs the file could not
+               be written, read or possibly does not exist ==*/
+         
+         exit('Error Uploading File.');
+       }
+    }
+    
+    /** DATABASE STUFF **/
+	 
+	// $user_id = 1; // I will explain this on class, 
+	 
+	 //$q = "INSERT INTO files (name, user_id) VALUES ('".$final_filename."', ".$user_id.")";
+    
+	 //$r = $con->query($q);
+	 
+	 echo "
+    <script language='javascript'>
+    <!--
+        alert('El archivo ha sido agregado');
+        
+        document.location.href = '../index.php?tmpl=2';
+  	  -->
+     </script>
+   ";
+
+function getExtension($filename) 
+{
+   $parts = explode('.',$filename);
+   $last = count($parts) - 1;
+   $ext = $parts[$last];
+   return $ext;
+}
+
+?>

@@ -1,0 +1,32 @@
+Before installation
+-------------------------------------
+
+Make sure you have CakePHP 1.1.15 installed and working on your server.
+
+
+Installation
+-------------------------------------
+* Extract centauro-xx.tar.gz file on the same lavel than centauro/ directory
+* Rename cnetauro/config/database.php.default to database.php and add your database server settings
+* Rename centauro/config/centauro_config.php.default to centauro_config.php.
+* Run centauro/sql/bakesale.sql to create the database (with PHPMyAdmin or similar)
+* Run centauro/sql/essentials.sql to add essential content (page text, country and admin account) to database
+
+
+Optional
+-------------------------------------
+
+Follow these steps if you want to use demoproducts
+
+* Run centauro/sql/demo_products.sql to populate database with demoproducts
+* Copy files from centauro/docs/demo_products/ to centauro/webroot/img/uploads/
+
+
+Logging in
+-------------------------------------
+Go to www.yoursite.com/users/login/
+
+username: webmaster
+password: demo
+
+Remember to change username and password before publishing your store.

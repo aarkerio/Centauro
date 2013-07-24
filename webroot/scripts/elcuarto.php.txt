@@ -1,0 +1,17 @@
+#!/usr/bin/php
+<?php
+// Mi primer arreglo
+
+$mi_array = array("Tacubaya, DF, Mexico", "Pancho lopez",  4, 5.25);
+
+?>
+
+Bienvenidos a Zapata's bar!!
+
+<?php 
+echo "Saludos " .  $mi_array[1] . " eres de " . $mi_array[0] . " llevas " . $mi_array[2] . " cervezas, cada una cuesta \$".  $mi_array[3] . "\n";
+
+echo "El array tiene " . count($mi_array) . " elementos \n";
+
+?> 
+

@@ -1,0 +1,61 @@
+<?php 
+/*
+ * GagsHelper By Manuel Montoya.
+ * comments, bug reports are welcome mmontoya AT gmail DOT com
+ * @author aarkerio
+ * @version 0.1 
+ * @license GPLv3
+ */
+class GagsHelper extends Helper {
+  
+   public  $initialized = false;
+   public  $helpers = array('Html', 'Ajax');
+   
+   public function confirmDel($id, $controller) 
+   {
+        
+        $strB  = $this->Html->formTag('/admin/'.$controller.'/delete/'.$id.'/', 'post', array("onsubmit"=>"return confirm('Are you sure to delete?')"));
+        $strB .= $this->Html->submit('Delete');
+        $strB .= "</form>";
+        
+        return $strB;
+   }
+   
+   public function sendEdit($id, $controller) 
+   {
+        
+        $strB  = $this->Html->formTag('/admin/'.$controller.'/edit/'.$id, 'post');
+        $strB .= $this->Html->submit('Edit');
+        $strB .= "</form>";
+        
+        return $strB;
+   }
+   
+   public function setStatus($s) 
+   {
+           
+           $status = ( $s == 1 ) ? 'Published' : 'Draft';
+           
+           return $status;
+   }
+   
+  public function setImages() 
+  {
+      $img  = '<p style="text-align:right;width:150px;float:right">';
+      $img .= $this->Html->link($this->Html->image('admin/myimages.jpg', array("alt"=>"My Images", "title"=>"My Images")), '#', 
+              array("onclick"=>"javascript:window.open('/admin/images/listing/set', 'blank', 'toolbar=no, scrollbars=yes,width=700,height=500')"), null, null,false);
+      $img .= '</p>';
+     return $img;
+  }
+  
+  public function construction() 
+  {
+     return '<p align="center">' . $this->Html->image('static/construction.jpg', array("alt"=>"Under construction", "title"=>"Under construction")) . '</p>';
+  }
+
+  public function delTags($code)
+  {
+    return strip_tags($code, '<p><a><img><h1><span><h2><hr>');
+  }
+ 
+}

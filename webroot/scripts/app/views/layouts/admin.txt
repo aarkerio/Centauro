@@ -1,0 +1,71 @@
+<?php echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+ <head>
+  <title>Karamelo: Control Panel</title>
+<!--[if gte IE 5.5]>
+   <?php  echo $javascript->link('dhtml'); ?>
+<![endif]-->
+<?php 
+
+echo $html->css("cpanel/cpanel");
+
+if ( isset($javascript) ):
+  echo $html->charsetTag('UTF-8');
+  echo $javascript->link('prototype'); 
+  echo $javascript->link('scriptaculous.js?load=effects');
+endif;
+?>
+
+ </head>
+<body>
+<script type="text/javascript">
+   window.onload = timedMsg;
+</script>
+<?php $session->flash(); ?> 
+
+<div id="header">
+<h1><?php echo $html->link('Karamelo: Control Panel', '/admin/entries/start'); ?></h1>
+   <p>e-Learning platform</p> 
+   
+<?php //echo $html->link($othAuth->user('name') . '\'s blog',  '/blog/'. $othAuth->user('username'), array("style"=>"color:white;text-decoration:none;font-weight:bold;")); 
+?>
+</div><!-- header ends-->
+  <p>
+     Logged in as <strong><?php echo $othAuth->user('username'); ?></strong> |
+     <strong><a href="/"><?php  echo $_SERVER['SERVER_NAME']; ?></a></strong>    
+       <a href="/admin/users/edit/<?php //echo $othAuth->user('id'); ?>">My Account</a> |
+       <a href="/users/logout">Logout</a>    
+ </p>
+<div style="clear:both;"></div>
+<?php //echo $this->renderElement('admin_menu'); ?>
+
+<div style="float:left;border:1px solid white;width:600px;margin:10px 300px;text-align:left;">
+                      <?php echo $content_for_layout ?>
+</div>
+<div style="clear:both;"></div>
+
+   <div id="footer">
+          <p>Powered by the <a href="http://www.chipotle-software.com/" rel="external">Karamelo Project &copy; GPLv3</a></p>
+   </div>
+
+<div style="position:absolute;top:15px;left:800px"><!-- help button-->
+  <?php 
+     // help popup window
+     $o = '/admin/'.$this->name .'/'.$this->action;
+     $o = strtolower(str_replace('admin_', '', $o));
+     $path = '/helps/display' . $o;
+     //echo $o; 
+     $t="javascript:window.open('".$path."', 'blank', 'toolbar=no, scrollbars=yes,width=700,height=400')";
+      
+      echo $html->link($html->image('admin/help.gif', array("alt"=>"Help", "title"=>"Help", "class"=>"helping")), 
+                                  '#header',
+                                   array("onclick"=>$t),
+                                  null, false);
+?>
+</div> 
+
+</body>
+</html>
+

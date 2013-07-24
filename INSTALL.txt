@@ -1,0 +1,95 @@
+--------------------------------------------- 
+             CENTAURO Community Portal
+---------------------------------------------  
+
+Project Home:  http://centauro.chipotle-software.com/
+
+You can see the license here: http://www.gnu.org/licenses/gpl-3.0.html
+
+
+-------------------
+    INSTALLATION
+-------------------
+
+1) Get and uncompress Karamelo:
+
+$wget ftp://mononeurona.org/pub/karamelo/karamelo-0.1.tar.bz2
+
+$tar -jxvf karamelo-0.1.tar.bz2
+
+2)  You will need next packages:
+
+Apache (1 or 2)
+Rewrite module for Apache
+PHP version 5.2 or later  
+Postgresql 8.0 or later
+GD2 graphics libraries for PHP5
+
+
+On Debian/ubuntu:
+
+$sudo apt-get install apache2 libapache2-mod-php5 php5-pgsql postgresql-8.3 php5-gd
+
+
+On OpenSuSE:
+
+$sudo yast2 -i apache2 php5 php5-pgsql postgresql-8.2 php5-gd
+
+
+On NetBSD use pkgsrc. OpenBSD users prefer pkg_add.
+
+On Windows: mmmmm, no Windows version yet.
+
+Be sure rewrite apache2 module is enabled:  
+
+$sudo a2enmod rewrite
+
+3) Download CakePHP (current version 1.1.18)
+
+Uncompress in the same directory where you uncompressed karamelo.
+
+4) Edit Apache to setup the DocumentRoot on /home/aarkerio/web/karamelo/webroot
+
+indication "AllowOverride" should be "All"
+
+5) The webserver user must have permissions to write on karanmelo/tmp and karamelo/img/imgusers directories:
+
+$chmod 777 karamelo/tmp
+$chmod 777 karamelo/img/imgusers
+
+6) restart apache:
+
+$sudo /etc/init.d/apache2 restart
+
+7) Create database and create tables:
+
+$createdb -E UNICODE DBKARAMELO
+
+$psql DBKARAMELO < karamelo/config/sql/karamelo_postgres.sql
+
+8) Logging in http://karamelo.yourserver.edu
+
+login:admin
+password: karamelo
+
+9) Important: Go to "MY account" and change admin password
+
+10) Go to  ControlPanel->Users->Groups and modify the groups secret codes. (Default is '1111' for all groups).
+
+
+Enjoy!
+
+Karamelo Team
+
+----------------
+   HELP & SUPPORT
+----------------
+
+Go to:
+
+http://groups.google.com/group/Karamelo
+
+You can check known issues wiki:
+
+http://centauro.mononeurona.org/
+

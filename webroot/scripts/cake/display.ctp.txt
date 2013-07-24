@@ -1,0 +1,17 @@
+<?php
+//die(debug($data));
+
+if ( count($data) < 1):
+    echo $html->div(null, 'No hay entradas', array('style'=>'font-size:14pt;color:orange;'));
+endif;
+
+foreach ($data as $v):
+   $tmp  = $html->div('etitle', $v['Entry']['title']); 
+   $tmp .= $html->div('edate',  $v['Entry']['created'].'  <i>Theme: '.$v['Theme']['theme'].'</i>');
+   $tmp .= $html->div('ebody',  $v['Entry']['body']);
+   if ( $v['Entry']['comments'] == 1):
+       $tmp .= $html->div(null, $html->link('Write a comment', '/entries/view/'.$v['Entry']['id']));
+   endif;
+   echo $html->div('entry', $tmp); 
+endforeach;
+?>

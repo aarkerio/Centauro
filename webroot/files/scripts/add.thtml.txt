@@ -1,0 +1,40 @@
+
+<?php echo $html->formTag('/news/add/','post'); ?>
+
+<fieldset>
+<legend>Add new</legend>
+
+<table>
+<tr>
+  <td>
+  <?php echo $form->labelTag( 'News/title', 'Title' ); ?><br /> 
+  <?php echo $html->input('News/title', array("size" => 25, "maxlength" => 100)); ?>
+  <?php echo $html->tagErrorMsg('News/title', 'Title is required.'); ?>
+</td>
+
+
+<td>
+  <?php echo $form->labelTag( 'News/reference', 'Reference' );?><br /> 
+  <?php echo $html->input('News/reference', array("size" => 25, "maxlength" => 200, "value"=>"http://")); ?>
+</td>
+
+<tr>
+<td>
+
+  <?php echo $form->labelTag( 'News/Body', 'Text:' );?><br />
+  <?php echo $html->textarea('News/body', array("cols"=>80, "rows"=>45)) ?>
+  <?php echo $html->tagErrorMsg('News/body', 'Body is required.'); ?>
+<td>
+</tr>
+<tr>
+  <td><?php echo $form->labelTag( 'News/status', 'Published:' );?><?php echo $html->checkbox('News/status', null, array("value" => 1)); ?></td>
+       
+  <td><?php echo $form->labelTag( 'News/comments', 'Comments allowed:' );?><?php echo $html->checkbox('News/comments', null, array("value" => 1)); ?></td>
+</tr>
+<tr>
+<td>
+  <?php echo $html->submit('Send'); ?>
+</fieldset>
+</form>
+</td></tr>
+</table>

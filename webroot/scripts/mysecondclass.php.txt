@@ -1,0 +1,38 @@
+<?php
+//simple class 
+class myClass {
+    /**
+	 *  color string public attribute
+	 */
+	 
+    public $color    = null;
+	 
+	 protected $bouts = null;
+	 
+    protected $wins  = null;
+	 
+	 protected $total = null;
+	 
+    public function echoMe()
+	 { 
+	     $this->setColor('verde olivo');
+	     
+        echo ' color is ' . $this->color . ' and $total is ' . $this->total . "\n"; 
+    } 
+	 
+	 public function __construct() 
+	 {
+         $this->bouts = 10;
+         $this->wins = 5;
+			$this->total = $this->wins * $this->bouts;
+    }
+	 
+	 private function setColor($color)
+	 {
+	    $this->color = $color;
+	 }
+} 
+//create object
+$mine = new myClass(); 
+$mine->echoMe(); 
+?> 
