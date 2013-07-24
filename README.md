@@ -1,4 +1,6 @@
-Centauro
-========
+===================================
+  Centauro by Chipotle Software (tm)
+==================================
 
-Centauro
+Centauro is a full Intranet solution developed in CakePHP 2.3. License is GPLv3.
+
